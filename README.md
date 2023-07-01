@@ -16,12 +16,28 @@ Bureau of Transportation Statistics
 > https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?20=E
 >
 > https://www.transtats.bts.gov/ontime/departures.aspx
+>
+> https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr
 
 Geoapify (for airport coordinates) 
 
 ### inspiration 
 
 ![](./docs/img/inspiration1.png)
+
+
+### pre-operational database ETL information
+
+preparing the datasets, exploring through the available information. some considerations: 
+- years 
+- level of aggregation 
+- geographical region 
+
+The team's current direction is to tackle: 
+1. All carriers from AIH with outgoing flights 
+
+Subregion: Texas 
+Flight type: Intl & domestic
 
 
 
