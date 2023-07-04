@@ -39,5 +39,19 @@ The team's current direction is to tackle:
 Subregion: Texas 
 Flight type: Intl & domestic
 
+### Installation Notes 
+
+> For the best experience, this application is enjoyed by cloning the repository. Note that this process is optional - a fully fucntional static dashboard is available on the repository's page. 
+
+1. Double-click the "start_app.bat" 
+![](./docs/flaskapp/batfile.png)
+
+2. Click "Run Setup" to initialize the setup window, where the application will need a Openweather API key, as well as the City that is either the origin or destination to/from Houston IAH airport. 
+![](./docs/flaskapp/gui.png) ![](./docs/flaskapp/setup.png)
+
+3. Once weather data has been downloaded, the dashboard will be loaded with additional information regarding the best airlines as it relates to delay in 2022. 
+
+![](./docs/flaskapp/background.png)
+
 
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Setup</title>
+    <style>
+        body {
+            background-image: url('../background.png'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4c72b0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3d5b8c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application Setup
+            <h1>Flight Delay Explorer</h1>
+        </h1>
+        <form action="/weather" method="POST">
+            <label for="api_key">API Key:</label>
+            <input type="text" id="api_key" name="api_key" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <input type="submit" value="Get Weather">
+        </form>
+    </div>
+</body>
+</html>
