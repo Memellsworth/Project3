@@ -148,3 +148,11 @@ nav ul li ul li a:hover {
   height: 10px;
   margin-right: 5px;
 }
+
+.library-container {
+  display: flex;
+}
+
+.library-container a {
+  margin-right: 10px;
+}
