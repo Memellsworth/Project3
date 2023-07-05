@@ -7,6 +7,9 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="./static/styles.css">
+    <!-- About page -->
+    <!--<link rel="about" type="text/html" href="../templates/about.html">-->
+    <link href="./templates/about.html" rel="import" />
       <!-- Your JavaScript files -->
     <script type="text/javascript" src="./static/logic.js"></script>
       <!-- Leaflet CSS -->
@@ -17,12 +20,28 @@
 <body>
     <div class="header">
         <h1>Flight Tracker</h1>
+        
     </div>
     
     <div class="main">
         <div class="left-column">
-            <h3> drop down stuff here </h3>
+            <h3>  </h3>
             <!-- Add content for the left column here -->
+            <nav>
+                <p></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Tables</a>
+                        <ul>
+                            <li><a href="#">Table 1</a></li>
+                            <li><a href="#">Table 2</a></li>
+                            <li><a href="#">Table 3</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
         </div>
         
         <div class="right-column">
@@ -35,8 +54,17 @@
     </div>
     
     <div class="bottom-bar">
-        <h3> charts here </h3>
+        <h3> Charts </h3>
         <!-- Add charts or other content for the bottom bar here -->
+        <nav>
+            <ul>
+                <li><a href="#">Chart 1</a>
+                <li><a href="#">Chart 2</a>
+                <li><a href="#">Chart 3</a>
+                <li><a href="#">Chart 4</a>
+                
+            </ul>
+        </nav>
     </div>
 </body>
 </html>

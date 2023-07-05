@@ -1,0 +1,65 @@
+{% extends 'home.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block header %}
+<h1>About</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row about-row row-odd">
+    <div class="col-md-6 col-sm-12 text-box">
+        <h2>IAH Flight Delays</h2>
+        <p>IAH Flight Delays is a web app where you can summarize and compare the Statistical flights delay data over in 2022  in a
+            visual manner using our dynamic charts. We use the data from the <a
+                    href="https://www.transtats.bts.gov/ontime/departures.aspx" target="_blank"
+                    rel="noreferrer">Spotify Datasets</a> on <a href="https://www.transtats.bts.gov/" target="_blank"
+                                                                rel="noreferrer">bureau of transportation statistics</a> and created the plots based
+            on yearly data for flight delays for 2022. 
+        </p>
+    </div>
+    <div class="">
+        <img src="{{''}}" height="300" width="300">
+    </div>
+</div>
+<div class="row about-row">
+    <div class="">
+        <img src="{{}}" height="300" width="300">
+    </div>
+    <div class="">
+        <h2>Tools and Technology</h2>
+        <p>There are many tools and technologies used to create this web app. Some of them are listed below:</p>
+        <ul>
+            <li><a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">Flask</a></li>
+            <li><a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a></li>
+            <li><a href="https://www.sqlalchemy.org/" target="_blank" rel="noreferrer">SQL Alchemy</a></li>
+            <li><a href="https://d3js.org/" target="_blank" rel="noreferrer">D3 JS</a></li>
+            <li><a href="https://plotly.com/javascript/" target="_blank" rel="noreferrer">Plotly</a></li>
+            <li><a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a></li>
+            <li><a href="https://jquery.com/" target="_blank" rel="noreferrer">jQuery</a></li>
+            <li><a href="https://select2.org/" target="_blank" rel="noreferrer">Select 2</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row about-row row-odd">
+    <div class="col-md-6 col-sm-12 text-box">
+        <h2>add something here</h2>
+        <p>add some here</p>
+        <a href="" target="_blank" rel="noreferrer">Learn More about Keys in
+            Delays</a>
+    </div>
+    <div class="">
+        <img src="{{}}" height="300" width="300">
+    </div>
+</div>
+<div class="row about-row">
+    <div class="">
+        <img src="{{}}" height="300" width="300">
+    </div>
+    <div class="">
+        <h2>more stuff here</h2>
+        <p>more stuff here</p>
+    </div>
+</div>
+
+{% endblock %}
