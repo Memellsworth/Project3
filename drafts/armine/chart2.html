@@ -24,17 +24,17 @@
         
 
         const myChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: xlabels,
                 datasets: [{
-                    label: 'Average Delays by Month',
+                    label: 'Average Weather Delays by Airlines',
                     data: ydelay,
                     backgroundColor:                  
-                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(555, 20, 20, 0.2)',
                                     
                     borderColor: 
-                        'rgba(54, 162, 235, 1)',
+                        'rgba(555, 20, 20, 1)',
                         
                     
                     borderWidth: 1
@@ -55,14 +55,14 @@
             //getData();
 
             async function getData() {
-                const response = await fetch('average_delay_per_month.csv');
+                const response = await fetch('weather_delays.csv');
                 const data = await response.text();
                 const table =  data.split('\n').slice(1);
 
                 table.forEach(row => {
                     const columns = row.split(',');
-                    const month = columns[0];
-                    xlabels.push(month);
+                    const carrierName = columns[0];
+                    xlabels.push(carrierName);
                     const delay = columns[1];
                     ydelay.push(delay);
 
