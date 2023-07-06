@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "f3b5296e164cd3b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd28da529965d674",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f2b9cb4cebc00c82",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9bbf2b4c6f06bccf",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a982d30748ad10c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "028200ef02896443",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fe18314152d3bc91",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0e48bb37984b700d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "477ca5b75f396ffc",
+    "type": "split",
+    "children": [
+      {
+        "id": "d05910b8a7832166",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c905b82752546eb5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7dfb25db9576cbc3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a3dc6aa8efee366c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c58d2cd28654c9e5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "f2b9cb4cebc00c82",
+  "lastOpenFiles": [
+    "cards/vision 1-pager.md",
+    "cards/sketching out the vision.md",
+    "cards/web scraping.md",
+    "cards/user experience_update01.md",
+    "cards/user experience and interface.md",
+    "cards/milestone path.md",
+    "cards/front-end website development.md",
+    "cards/final presentation.md",
+    "cards/database schema and relates.md",
+    "cards/data visualization.md",
+    "cards/critical path.md",
+    "cards/back-end notes.md",
+    "cards",
+    "else/Pasted image 20230705230552.png",
+    "else/weather data.png",
+    "else/sketch.excalidraw.md",
+    "else/Pasted image 20230705225010.png",
+    "else/Pasted image 20230705230725.png",
+    "else/Pasted image 20230705230528.png",
+    "else/Pasted image 20230705224848.png",
+    "else/Pasted image 20230705222212.png",
+    "else/Pasted image 20230705224216.png",
+    "else/Pasted image 20230705224155.png",
+    "else/Pasted Image 20230629213249_197.png",
+    "else/milestones.canvas",
+    "else/inspiration.canvas",
+    "else",
+    "Project Development Journal Entries.md",
+    "[[Project.md",
+    "www.example.com.md",
+    "().md",
+    "sketches"
+  ]
+}
