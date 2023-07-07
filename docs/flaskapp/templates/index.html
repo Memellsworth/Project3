@@ -4,7 +4,7 @@
     <title>Application Setup</title>
     <style>
         body {
-            background-image: url('../background.png'); 
+            background-image: url(https://github.com/Memellsworth/Project3/blob/main/docs/flaskapp/background.png?raw=true); 
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -71,6 +71,9 @@
             <label for="city">City:</label>
             <input type="text" id="city" name="city" required>
             <input type="submit" value="Get Weather">
+        </form>
+        <form action="/weather" method="POST">
+            <input type="submit" value="Launch Dashboard" onclick="window.location.href = window.location.origin + '../../index.html'" />
         </form>
     </div>
 </body>

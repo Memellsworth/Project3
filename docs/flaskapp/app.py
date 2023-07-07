@@ -4,14 +4,8 @@ import os
 import json
 import time
 from datetime import datetime, timedelta
-from sqlalchemy import create_engine, inspect
-
-from config import db_user, db_password, db_host, db_port, db_name
-#from etl import extract, transform, load
-
 
 app = Flask(__name__)
-engine = create_engine(f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}")
 
 @app.route('/')
 def home():
@@ -25,17 +19,6 @@ def index():
         "Tables": "",
         "Charts": ""
     })
-
-
-@app.route("/About/")
-def About():
-    return render_template("about.html", pages={
-        "Home": "",
-        "Abour": "active",
-        "Tables": "",
-        "Charts": ""
-    })
-
 
 @app.route('/weather', methods=['POST'])
 def get_weather():
