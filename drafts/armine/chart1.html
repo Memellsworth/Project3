@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Chart</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    </head>
+    <body>
+        <canvas id="chart" width="400" height="400"></canvas>
+        <script>
+
+        const xlabels = [];
+        const ydelay = [];
+
+
+        chartIt();
+        
+        async function chartIt() {
+
+        await getData();
+        const ctx = document.getElementById('chart').getContext('2d');
+        
+
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: xlabels,
+                datasets: [{
+                    label: 'Average Delays by Month',
+                    data: ydelay,
+                    backgroundColor:                  
+                        'rgba(54, 162, 235, 0.2)',
+                                    
+                    borderColor: 
+                        'rgba(54, 162, 235, 1)',
+                        
+                    
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxis: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+            //getData();
+
+            async function getData() {
+                const response = await fetch('average_delay_per_month.csv');
+                const data = await response.text();
+                const table =  data.split('\n').slice(1);
+
+                table.forEach(row => {
+                    const columns = row.split(',');
+                    const month = columns[0];
+                    xlabels.push(month);
+                    const delay = columns[1];
+                    ydelay.push(delay);
+
+                });
+            };
+
+        </script>
+    </body>
+    </html>

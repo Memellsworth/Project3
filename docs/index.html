@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Flight Tracker Dashboard</title>
+    <title>Flight Delay Dashboard</title>
     <!-- D3 JavaScript -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Our CSS -->
@@ -13,16 +13,33 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="icon" sizes="96x96" href="./img/airport.png">
 </head>
 <body>
     <div class="header">
-        <h1>Flight Tracker</h1>
+        <h1>Flight Delay Dashboard</h1>
+        <div> <h5> Explore and compare the delay statistics for commercial airlines departing/arriving to/from IAH </h5><br>  </div> 
+         <div class="right-column"><a href="./journal/project-development-journal-entries.html" class="header">project documentation</a> </div>     
     </div>
     
     <div class="main">
         <div class="left-column">
-            <h3> drop down stuff here </h3>
+            <h3>  </h3>
             <!-- Add content for the left column here -->
+            <nav>
+                <p></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Tables</a>
+                        <ul>
+                            <li><a href="table1.html">Table 1</a></li>
+                            <li><a href="table2.html">Table 2</a></li>
+                            <li><a href="table3.html">Table 3</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
         </div>
         
         <div class="right-column">
@@ -35,8 +52,17 @@
     </div>
     
     <div class="bottom-bar">
-        <h3> charts here </h3>
+        <h3> Charts </h3>
         <!-- Add charts or other content for the bottom bar here -->
+        <nav>
+            <ul>
+                <li><a href="../drafts/armine/chart1.html">Chart 1</a>
+                <li><a href="#">Chart 2</a>
+                <li><a href="#">Chart 3</a>
+                <li><a href="#">Chart 4</a>
+                
+            </ul>
+        </nav>
     </div>
 </body>
 </html>
