@@ -1,41 +1,21 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 import requests
 import os
 import json
 import time
 from datetime import datetime, timedelta
-from sqlalchemy import create_engine, inspect
-
-from config import db_user, db_password, db_host, db_port, db_name
-#from etl import extract, transform, load
-
 
 app = Flask(__name__)
-engine = create_engine(f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}")
 
-@app.route('/')
+# ... existing routes ...
+
+@app.route('/setup')
+def setup():
+    return render_template('setup.html')
+
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
-
-@app.route('/')
-def index():
-    return render_template('index.html', pages={
-        "Home": "active",
-        "About": "",
-        "Tables": "",
-        "Charts": ""
-    })
-
-
-@app.route("/About/")
-def About():
-    return render_template("about.html", pages={
-        "Home": "",
-        "Abour": "active",
-        "Tables": "",
-        "Charts": ""
-    })
-
 
 @app.route('/weather', methods=['POST'])
 def get_weather():
@@ -43,7 +23,7 @@ def get_weather():
     city = request.form['city']
 
     if not api_key or not city:
-        return jsonify({'status': 'error', 'message': 'Missing api_key or city'}), 400
+        return render_template('weather_popup.html', error_message='Missing api_key or city')
 
     # code to handle user input for origin or destination
     # By default, assume Houston is the other city
@@ -61,7 +41,8 @@ def get_weather():
     response = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={city},us&limit=1&appid={api_key}')
     
     if response.status_code != 200:
-        return jsonify({'status': 'error', 'message': 'Failed to get lat/long for city'}), 500
+        return render_template('weather_popup.html', error_message='Failed to get weather data')
+
 
     lat, lon = response.json()[0]['lat'], response.json()[0]['lon']
 
@@ -71,13 +52,15 @@ def get_weather():
 
     response = requests.get(f'https://history.openweathermap.org/data/2.5/history/city?lat={lat}&lon={lon}&type=hour&start={start}&end={end}&appid={api_key}')
     
-    if response.status_code != 200:
-        return jsonify({'status': 'error', 'message': 'Failed to get weather data'}), 500
-
     weather_data = response.json()
 
     # Save the weather data to a file
     with open('local_weather.json', 'w') as f:
         json.dump(weather_data, f)
 
-    return jsonify({'status': 'success'})
+    return render_template('weather_popup.html', weather_data=weather_data)
+
+# ... additional routes ...
+
+if __name__ == '__main__':
+    app.run()

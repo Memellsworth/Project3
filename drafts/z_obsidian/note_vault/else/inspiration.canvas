@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"type":"file","file":"else/interactive scatter plot.png","id":"bc887dcf0bc128ea","x":-277,"y":-264,"width":400,"height":171},
+		{"type":"file","file":"else/classic pie chart.png","id":"4dbb0b870d5834ce","x":-277,"y":-60,"width":399,"height":144},
+		{"type":"file","file":"else/airline charting.png","id":"c5394428ba2fc132","x":140,"y":-264,"width":482,"height":348},
+		{"type":"file","file":"else/weather data.png","id":"e7c5657e755ad81f","x":-277,"y":120,"width":400,"height":304},
+		{"type":"file","file":"else/delay types.png","id":"bde2a0b611581139","x":140,"y":120,"width":482,"height":293}
+	],
+	"edges":[]
+}
