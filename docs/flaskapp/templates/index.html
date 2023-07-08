@@ -1,80 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Application Setup</title>
-    <style>
-        body {
-            background-image: url(https://github.com/Memellsworth/Project3/blob/main/docs/flaskapp/background.png?raw=true); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 85%;
-            max-width: 500px;
-            padding: 20px;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 10px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4c72b0;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #3d5b8c;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Flight Delay Dashboard</title>
+    <!-- D3 JavaScript -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="./static/styles.css">
+      <!-- Your JavaScript files -->
+    <script type="text/javascript" src="./static/logic.js"></script>
+      <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="icon" sizes="96x96" href="./img/airport.png">
 </head>
 <body>
-    <div class="container">
-        <h1>Application Setup
-            <h1>Flight Delay Explorer</h1>
-        </h1>
-        <form action="/weather" method="POST">
-            <label for="api_key">API Key:</label>
-            <input type="text" id="api_key" name="api_key" required>
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
-            <input type="submit" value="Get Weather">
-        </form>
-        <form action="/weather" method="POST">
-            <input type="submit" value="Launch Dashboard" onclick="window.location.href = window.location.origin + '../../index.html'" />
-        </form>
+    <div class="header">
+        <h1>Flight Delay Dashboard</h1>
+        <div> <h5> Explore and compare the delay statistics for commercial airlines departing/arriving to/from IAH </h5><br>  </div> 
+         <div class="right-column"><a href="https://memellsworth.github.io/Project3/journal/project-development-journal-entries.html" class="header">project documentation</a> </div>     
+    </div>
+    
+    <div class="main">
+        <div class="left-column">
+            <h3>  </h3>
+            <!-- Add content for the left column here -->
+            <nav>
+                <p></p>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tables</a>
+                        <ul>
+                            <li><a href="#">Table 1</a></li>
+                            <li><a href="#">Table 2</a></li>
+                            <li><a href="#">Table 3</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="right-column">
+            <div class="map-container">
+                <h3> map here </h3>
+                    <div id="map"></div>
+                <!-- Add map content here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="bottom-bar">
+        <h3> Charts </h3>
+        <!-- Add charts or other content for the bottom bar here -->
+        <nav>
+            <ul>
+                <li><a href="#">Chart 1</a>
+                <li><a href="#">Chart 2</a>
+                <li><a href="#">Chart 3</a>
+                <li><a href="#">Chart 4</a>
+                
+            </ul>
+        </nav>
     </div>
 </body>
 </html>
