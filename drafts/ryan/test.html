@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3.js Bar Chart Example</title>
+    <style>
+      svg {
+        background-color: #f5f5f5;
+        margin-top: 20px;
+      }
+
+      rect {
+        fill: steelblue;
+      }
+
+      text {
+        font-size: 12px;
+        text-anchor: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bar Chart Example</h1>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      // Load the JSON data
+      d3.json("delays.json").then(function(data) {
+        // Extract the necessary data
+        const carriers = data.map(d => d.carrier);
+        const numFlights = data.map(d => d.arr_flights);
+
+        // Create an SVG element
+        const svg = d3.select("body")
+          .append("svg")
+          .attr("width", 2000)
+          .attr("height", 300);
+
+        // Create and position rectangles for the bar chart
+        svg.selectAll("rect")
+          .data(numFlights)
+          .enter()
+          .append("rect")
+          .attr("x", (d, i) => i * 60)
+          .attr("y", (d) => 300 - d)
+          .attr("width", 50)
+          .attr("height", (d) => d);
+
+        // Add labels to the bars
+        svg.selectAll("text")
+          .data(carriers)
+          .enter()
+          .append("text")
+          .text((d) => d)
+          .attr("x", (d, i) => i * 60 + 25)
+          .attr("y", 290)
+          .attr("font-size", "12px")
+          .attr("text-anchor", "middle");
+      }).catch(function(error) {
+        console.error("Error loading the JSON file:", error);
+      });
+    </script>
+  </body>
+</html>

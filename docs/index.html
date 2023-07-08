@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Flight Delay Dashboard</title>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- D3 JavaScript -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="./static/styles.css">
       <!-- Your JavaScript files -->
     <script type="text/javascript" src="./static/logic.js"></script>
-    <script type="text/javascript" src="./drafts/ryan/logic.js"></script>
+    <script type="text/javascript" src="./static/ryan_logic.js"></script>
       <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Leaflet JS -->
@@ -54,15 +56,17 @@
     <div class="bottom-bar">
         <h3> Charts </h3>
         <!-- Add charts or other content for the bottom bar here -->
-        <nav>
-            <ul>
-                <li><a href="#">Chart 1</a>
-                <li><a href="#">Chart 2</a>
-                <li><a href="#">Chart 3</a>
-                <li><a href="#">Chart 4</a>
-                
-            </ul>
-        </nav>
+        <div class="row">
+            <div class="col">
+                <div id="bar"></div>
+            </div>
+            <div class="col">
+                <div id="pie"></div>
+            </div>
+            <div class="col">
+                <div id="crazy"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
