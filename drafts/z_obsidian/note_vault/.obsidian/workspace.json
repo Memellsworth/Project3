@@ -11,8 +11,12 @@
             "id": "f2b9cb4cebc00c82",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "cards/database schema and relates.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "cards/database schema and relates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "cards/database schema and relates.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "cards/database schema and relates.md"
+              }
             }
           }
         ]
@@ -142,17 +150,20 @@
   },
   "active": "f2b9cb4cebc00c82",
   "lastOpenFiles": [
+    "cards/data sources.md",
+    "cards/csvglob.md",
+    "cards/database schema and relates.md",
+    "Project Development Journal Entries.md",
+    "cards/user experience and interface.md",
+    "cards/user experience_update01.md",
+    "cards/milestone path.md",
+    "cards/critical path.md",
     "cards/vision 1-pager.md",
     "cards/sketching out the vision.md",
     "cards/web scraping.md",
-    "cards/user experience_update01.md",
-    "cards/user experience and interface.md",
-    "cards/milestone path.md",
     "cards/front-end website development.md",
     "cards/final presentation.md",
-    "cards/database schema and relates.md",
     "cards/data visualization.md",
-    "cards/critical path.md",
     "cards/back-end notes.md",
     "cards",
     "else/Pasted image 20230705230552.png",
@@ -169,7 +180,6 @@
     "else/milestones.canvas",
     "else/inspiration.canvas",
     "else",
-    "Project Development Journal Entries.md",
     "[[Project.md",
     "www.example.com.md",
     "().md",
