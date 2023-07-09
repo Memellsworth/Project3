@@ -7,7 +7,7 @@ import csv
 
 # %%
 # IMPORT FILE PATHS 
-active_project = "../rawdata/iahhist/"
+active_project = "../rawdata/iahhist_mf/"
 
 file_paths = glob.glob(os.path.join(active_project, "*.csv"))
 
@@ -59,6 +59,9 @@ def modify_in_df(df):
     raw_header = raw_table.iloc[0]
     raw_table.columns = raw_header  # Set the new header
     raw_table = raw_table.iloc[1:]  # Remove the first row
+    #raw_table = raw_table.apply(lambda x: x.str.strip('"'))
+    #raw_table["Date (MM/DD/YYYY)"] = pd.to_datetime(raw_table["Date (MM/DD/YYYY)"])
+    #raw_table = raw_table[raw_table["Date (MM/DD/YYYY)"].dt.year > 2012]
     return raw_table 
 
 # %%
@@ -73,16 +76,14 @@ for i in range(len(valid_dfs)):
         df = valid_dfs[i]  # Retrieve the DataFrame by index
         modified_df = modify_in_df(df) # use this step to Modify the DataFrame
         modified_df_list.append(modified_df)  # Append the modified DataFrame to the list
+        # Generate CSV file for the modified DataFrame
+        # filename = f"modified_df_{i}.csv"
+        #modified_df.to_csv(filename, index=False)
     except Exception as e:
         error_log.append((i, str(e)))  # Log the index and error message
 
 # %%
 big_df = pd.concat(modified_df_list, ignore_index=True)
 
-
-# %%
-big_df = big_df.apply(lambda x: x.str.strip('"'))
-
-aih_hist = big_df
-
+historical_iah = big_df
 
