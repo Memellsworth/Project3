@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>front-end website development</title>
+  <title>csvglob</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -25678,25 +25678,115 @@ community:
         <style id="MJX-CHTML-styles"></style>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
-          <div class="mod-header">
-            <div class="inline-title" data-heading="front-end website development" id="front-end_website_development" style="display: block;">front-end website development</div>
+          <div class="mod-header"></div>
+          <div>
+            <h1 data-heading="Importing All of Texas flight delay info into dataframe" id="Importing_All_of_Texas_flight_delay_info_into_dataframe">Importing All of Texas flight delay info into dataframe</h1>
           </div>
           <div>
-            <h3 data-heading="getting started" id="getting_started" style="display: flex;">
+            <h3 data-heading="Dependencies" id="Dependencies" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>getting started
+                </svg></div>Dependencies
             </h3>
           </div>
           <div>
-            <h3 data-heading="additional plugins used" id="additional_plugins_used" style="display: flex;">
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> glob
+<span class="token keyword">import</span> csv
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="Glob Importer" id="Glob_Importer" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>additional plugins used
+                </svg></div>Glob Importer
             </h3>
           </div>
           <div>
-            <p>back to <a data-href="Project Development Journal Entries" href="project-development-journal-entries.html" class="internal-link" target="_self" rel="noopener">Project Development Journal Entries</a></p>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># IMPORT FILE PATHS</span>
+active_project <span class="token operator">=</span> <span class="token string">"../../../Project3/drafts/rawdata/texas2022/"</span>
+csv_output <span class="token operator">=</span> <span class="token string">"../../../Project3/drafts/alberto/texas_2022_delays.csv"</span>
+file_paths <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>active_project<span class="token punctuation">,</span> <span class="token string">"*.csv"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h5 data-heading="Dataframes out of every csv" id="Dataframes_out_of_every_csv" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Dataframes out of every csv
+            </h5>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># setting up the list for all raw dfs</span>
+all_df <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token comment"># listing turning movement counts as current</span>
+current_csv_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_paths<span class="token punctuation">:</span>
+    current_csv_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+<span class="token comment"># function to read all csvs listed</span>
+<span class="token keyword">def</span> <span class="token function">read_csv</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        imp_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>file_path<span class="token punctuation">,</span>
+                             sep<span class="token operator">=</span><span class="token string">'delimiter'</span><span class="token punctuation">,</span>
+                             header<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+                             engine<span class="token operator">=</span><span class="token string">'python'</span>
+                            <span class="token punctuation">)</span>
+        <span class="token keyword">return</span> imp_df <span class="token comment">#imp_df as in imported dataframe</span>
+    <span class="token keyword">except</span> pd<span class="token punctuation">.</span>errors<span class="token punctuation">.</span>ParserError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f"Error parsing CSV: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">str</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>  <span class="token comment"># Return tuple with file path and error message</span>
+    <span class="token keyword">except</span> FileNotFoundError<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> <span class="token string">"File not found"</span><span class="token punctuation">)</span>  <span class="token comment"># Return tuple with file path and error message</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>error handling </p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment">## validating dataframes - sometimes there's errors</span>
+<span class="token keyword">for</span> file_path <span class="token keyword">in</span> current_csv_list<span class="token punctuation">:</span>
+    imp_df <span class="token operator">=</span> read_csv<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>  <span class="token comment"># Assign the returned DataFrame to imp_df</span>
+    all_df<span class="token punctuation">.</span>append<span class="token punctuation">(</span>imp_df<span class="token punctuation">)</span>  <span class="token comment"># Append imp_df to all_df</span>
+
+valid_dfs <span class="token operator">=</span> <span class="token punctuation">[</span>df <span class="token keyword">for</span> df <span class="token keyword">in</span> all_df <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>df<span class="token punctuation">,</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># Filter out non-DataFrame objects</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>bundling </p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment">## loop through dataframes</span>
+modified_df_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># List to store the modified DataFrames</span>
+error_log <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># List to store the error details</span>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>valid_dfs<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        df <span class="token operator">=</span> valid_dfs<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  <span class="token comment"># Retrieve the DataFrame by index</span>
+        modified_df <span class="token operator">=</span> df <span class="token comment"># use this step to Modify the DataFrame</span>
+        modified_df_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>modified_df<span class="token punctuation">)</span>  <span class="token comment"># Append the modified DataFrame to the list</span>
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        error_log<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Log the index and error message</span>
+
+<span class="token comment">## concatenate through all the lists</span>
+big_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span>modified_df_list<span class="token punctuation">,</span> ignore_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>cleaning data </p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded">raw_data_startrow <span class="token operator">=</span> big_df<span class="token punctuation">.</span>index<span class="token punctuation">[</span>big_df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"YEAR,QUARTER,MONTH,FL_DATE,OP_UNIQUE_CARRIER,TAIL_NUM,OP_CARRIER_FL_NUM,ORIGIN_AIRPORT_ID,ORIGIN_AIRPORT_SEQ_ID,ORIGIN_CITY_MARKET_ID,ORIGIN,ORIGIN_CITY_NAME,ORIGIN_STATE_NM,DEST_AIRPORT_ID,DEST_AIRPORT_SEQ_ID,DEST_CITY_MARKET_ID,DEST,DEST_CITY_NAME,DEST_STATE_NM,DEP_DELAY,TAXI_OUT,WHEELS_OFF,WHEELS_ON,TAXI_IN,ARR_DELAY,CANCELLED,CANCELLATION_CODE,DIVERTED,CARRIER_DELAY,WEATHER_DELAY,NAS_DELAY,SECURITY_DELAY,LATE_AIRCRAFT_DELAY,DIV_DISTANCE"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+raw_data <span class="token operator">=</span> big_df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>raw_data_startrow<span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># Extract from the starting row onwards</span>
+raw_data<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>drop<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+raw_data <span class="token operator">=</span> raw_data<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">{</span>raw_data<span class="token punctuation">.</span>columns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token string">"rawdata"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+raw_table <span class="token operator">=</span> raw_data<span class="token punctuation">[</span><span class="token string">"rawdata"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">,</span>expand<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token comment">#split columns</span>
+raw_header <span class="token operator">=</span> raw_table<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+raw_table<span class="token punctuation">.</span>columns <span class="token operator">=</span> raw_header  <span class="token comment"># Set the new header</span>
+raw_table <span class="token operator">=</span> raw_table<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># Remove the first row</span>
+
+</code><button class="copy-code-button">Copy</button></pre>
           </div>
           <div class="mod-footer"></div>
         </div>

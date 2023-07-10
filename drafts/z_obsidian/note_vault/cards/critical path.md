@@ -2,7 +2,7 @@
 
 #### Data and Delivery
 
-- [ ] Data components used in the project are clearly documented. 
+- [x] Data components used in the project are clearly documented. 
 - [x] The dataset contains at least 100 unique records. 
 - [ ] A database is used to house the data (SQL, MongoDB, SQLite, etc.). 
 - [ ] The project is powered by a Python Flask API and includes HTML/CSS, JavaScript, and the chosen database. 

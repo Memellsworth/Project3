@@ -1,9 +1,9 @@
 > Charting the initial responsibilities and big tasks 
 
-Front end: Alberto 
-Back end: Armine 
-Charts: Ryan 
-Dataset Sourcing: Maura
+**Front end**: Alberto 
+**Back end**: Armine 
+**Charts:** Ryan 
+**Dataset Sourcing**: Maura
 
 Although these were our big tasks, we assisted each other completing smaller steps to add to our project. 
 

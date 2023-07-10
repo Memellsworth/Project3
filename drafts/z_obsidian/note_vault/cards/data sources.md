@@ -5,7 +5,7 @@
 ### Current Data -On-Time : Reporting Carrier On-Time Performance (1987-present)
 [https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr](https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr)
 
-**method**: import into db from merged csv 
+**method**: import into db from merged [[csvglob]]
 **objective**: provide a current baseline of all flights that either depart or originate from IAH. 
 
 **Context**: from the downloads page, downloaded the csv's for each month in 2022. Through a batch merger script [[csvglob]]. Then we pull only flights that either originated or arrived at IAH
@@ -17,7 +17,7 @@ truncated_df = raw_table[(raw_table['ORIGIN_AIRPORT_ID'] == '12266') | (raw_tabl
 
 ### Historical Data - Detailed Statistics Departures
 https://www.transtats.bts.gov/ontime/departures.aspx 
-**method**: python webscraping
+**method**: python [[web scraping]]
 **objective**: deeper dive into the particular destination city, and see if there's any trend across airlines servicing that destination as it relates to delay. 
 
 **context**: per the BTS website, there are records from 2023-1987. out of all the airlines domestically servicing flights out of IAH, there are a subset of airlines that have valid dataset. 
@@ -46,6 +46,7 @@ airlines = ["Alaska Airlines Inc. (AS)",
 
 
 # Weather API 
+
 
 
 # Geoapify API 

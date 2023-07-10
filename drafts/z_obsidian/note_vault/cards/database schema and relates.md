@@ -1,8 +1,8 @@
 > casual documentation of the team's approach to data ETL 
 
-### Documentation on [[data sources]]
+### [[data sources]]
 
-#### getting started 
+### getting started 
 
 
 

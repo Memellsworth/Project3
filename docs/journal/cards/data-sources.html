@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>front-end website development</title>
+  <title>data sources</title>
   <base href="../">
   <meta id="root-path" root-path="../">
 
@@ -25678,25 +25678,84 @@ community:
         <style id="MJX-CHTML-styles"></style>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
-          <div class="mod-header">
-            <div class="inline-title" data-heading="front-end website development" id="front-end_website_development" style="display: block;">front-end website development</div>
+          <div class="mod-header"></div>
+          <div>
+            <blockquote>
+              <p>insight on how everything on our dashboard is related </p>
+            </blockquote>
           </div>
           <div>
-            <h3 data-heading="getting started" id="getting_started" style="display: flex;">
+            <h1 data-heading="Bureau of Transportation Statistics" id="Bureau_of_Transportation_Statistics">Bureau of Transportation Statistics</h1>
+          </div>
+          <div>
+            <h3 data-heading="Current Data -On-Time :&nbsp;Reporting Carrier On-Time Performance (1987-present)" id="Current_Data_-On-Time_:&nbsp;Reporting_Carrier_On-Time_Performance_(1987-present)" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>getting started
+                </svg></div>Current Data -On-Time :&nbsp;Reporting Carrier On-Time Performance (1987-present)
             </h3>
           </div>
           <div>
-            <h3 data-heading="additional plugins used" id="additional_plugins_used" style="display: flex;">
+            <p><a rel="noopener" class="external-link" href="https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&amp;QO_fu146_anzr=b0-gvzr" target="_blank">https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&amp;QO_fu146_anzr=b0-gvzr</a></p>
+          </div>
+          <div>
+            <p><strong>method</strong>: import into db from merged <a data-href="csvglob" href="cards/csvglob.html" class="internal-link" target="_self" rel="noopener">csvglob</a><br>
+              <strong>objective</strong>: provide a current baseline of all flights that either depart or originate from IAH.
+            </p>
+          </div>
+          <div>
+            <p><strong>Context</strong>: from the downloads page, downloaded the csv's for each month in 2022. Through a batch merger script <a data-href="csvglob" href="cards/csvglob.html" class="internal-link" target="_self" rel="noopener">csvglob</a>. Then we pull only flights that either originated or arrived at IAH</p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded">truncated_df <span class="token operator">=</span> raw_table<span class="token punctuation">[</span><span class="token punctuation">(</span>raw_table<span class="token punctuation">[</span><span class="token string">'ORIGIN_AIRPORT_ID'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'12266'</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>raw_table<span class="token punctuation">[</span><span class="token string">'DEST_AIRPORT_ID'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'12266'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p><strong>output</strong>: .json to be loaded to the databse sql and used to generate charts. </p>
+          </div>
+          <div>
+            <h3 data-heading="Historical Data - Detailed Statistics Departures" id="Historical_Data_-_Detailed_Statistics_Departures" style="display: flex;">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>additional plugins used
+                </svg></div>Historical Data - Detailed Statistics Departures
             </h3>
           </div>
           <div>
-            <p>back to <a data-href="Project Development Journal Entries" href="project-development-journal-entries.html" class="internal-link" target="_self" rel="noopener">Project Development Journal Entries</a></p>
+            <p><a rel="noopener" class="external-link" href="https://www.transtats.bts.gov/ontime/departures.aspx" target="_blank">https://www.transtats.bts.gov/ontime/departures.aspx</a><br>
+              <strong>method</strong>: python <a data-href="web scraping" href="cards/web-scraping.html" class="internal-link" target="_self" rel="noopener">web scraping</a><br>
+              <strong>objective</strong>: deeper dive into the particular destination city, and see if there's any trend across airlines servicing that destination as it relates to delay.
+            </p>
+          </div>
+          <div>
+            <p><strong>context</strong>: per the BTS website, there are records from 2023-1987. out of all the airlines domestically servicing flights out of IAH, there are a subset of airlines that have valid dataset. </p>
+          </div>
+          <div>
+            <pre class="language-python" tabindex="0"><code class="language-python is-loaded">airlines <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Alaska Airlines Inc. (AS)"</span><span class="token punctuation">,</span>
+            <span class="token string">"American Airlines Inc. (AA)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Delta Airlines Inc. (DL)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Frontier Airlines Inc. (F9)"</span><span class="token punctuation">,</span>
+            <span class="token string">"JetBlue Airways (B6)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Southwest Airlines Co. (WN)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Spirit Airlines (NK)"</span><span class="token punctuation">,</span>
+            <span class="token string">"United Airlines Inc. (UA)"</span><span class="token punctuation">,</span>
+            <span class="token string">"America West Airlines Inc. (HP)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Atlantic Southeast Airlines (EV)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Continental Airlines Inc. (CO)"</span><span class="token punctuation">,</span>
+            <span class="token string">"US Airways Inc. (US)"</span><span class="token punctuation">,</span>
+            <span class="token string">"SkyWest Airlines Inc. (OO)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Republic Airline (YX)"</span><span class="token punctuation">,</span>
+            <span class="token string">"Endeavor Air Inc. (9E)"</span><span class="token punctuation">,</span>
+            <span class="token string">"American Eagle Airlines Inc. (MQ)"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p><strong>output</strong>: a dataframe that will be loaded upon the setup of the flask api. CSV to be loaded to the databse sql and used to generate charts. </p>
+          </div>
+          <div>
+            <h1 data-heading="Weather API" id="Weather_API">Weather API</h1>
+          </div>
+          <div>
+            <h1 data-heading="Geoapify API" id="Geoapify_API">Geoapify API</h1>
           </div>
           <div class="mod-footer"></div>
         </div>
