@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "conn",
+            "database": "${workspaceFolder:Project3}/drafts/alberto/rawdata.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
