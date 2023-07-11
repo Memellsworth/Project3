@@ -1,12 +1,26 @@
+let dropdownMenu = d3.select("#selDataset");
+
 d3.json("/drafts/ryan/delays.json").then(function(data) {
     console.log(data);
     // Extract the necessary data
     const carriers = data.map(d => d.carrier_name);
     const numFlights = data.map(d => d.arr_flights);
     const arrDelay = data.map(d => d.arr_delay);
-    const months = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+    const airlineNames = [];
+    const dec = [];
+    const decDelay = [];
+    const decWeather = [];
+    const decNumFlights = [];
 
-    console.log(arrDelay);
+    for (i=0; i<12; i++) {
+      dec.push(data[i]);
+      airlineNames.push(data[i].carrier_name);
+      decDelay.push(data[i].arr_delay / 60);
+      decWeather.push(data[i].weather_delay);
+      decNumFlights.push(data[i].arr_flights / 10);
+    };
+
+    console.log(decDelay);
 
     let trace = {
       x: carriers,
@@ -38,21 +52,24 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     Plotly.newPlot('pie', [trace1], layout1);
 
     let trace2 = {
-      x: carriers,
-      y: arrDelay,
+      x: decDelay,
+      y: decWeather,
+      text: airlineNames,
       mode: 'markers',
       marker: {
-        size: numFlights / 2
+        color: ["#fafa6e", "#cdef72", "#a4e27a", "#7dd382", "#58c389", "#35b28e", "#0ea18f", "#008f8c", "#007d85", "#146b79", "#23596a", "#2a4858"],
+        size: decNumFlights
       }
     };
 
     let layout2 = {
-      title: "something",
-      height:500,
-      width:500
+      title: "December 2022 Flight Delays",
+      showlegend: false,
+      height: 500,
+      width: 500
     };
 
-    Plotly.newPlot("crazy", [trace2], layout2);
+    Plotly.newPlot("bubble", [trace2], layout2);
 
   }).catch(function(error) {
     // Handle error if the JSON file fails to load

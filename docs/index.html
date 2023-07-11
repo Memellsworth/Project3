@@ -56,17 +56,20 @@
     <div class="bottom-bar">
         <h3> Charts </h3>
         <!-- Add charts or other content for the bottom bar here -->
-        <div class="row">
-            <div class="col">
-                <div id="bar"></div>
-            </div>
-            <div class="col">
-                <div id="pie"></div>
-            </div>
-            <div class="col">
-                <div id="crazy"></div>
-            </div>
-        </div>
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </th>
+            </tr>
+            <tr>
+                <td id="bar"></td>
+                <td id="pie"></td>
+                <td id="bubble"></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
