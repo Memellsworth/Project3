@@ -2,26 +2,33 @@
 
 ### getting started 
 
-# *root folder* 
-- ## docs 
-	- ### static
+
+
+
+
+
+
+### folder structure
+		# *root folder* 
+		- ## docs 
+		- ### static
 		- .js , .css and other static support files 
-	- ### flaskapp
+		- ### flaskapp
 		- templates
-			- html specifically for the flask app
+		- html specifically for the flask app
 		- venv
-			- virtual environment to load all necessary libraries
+		- virtual environment to load all necessary libraries
 		- requirements.txt
 		- setup.py 
-	- ### img
+		- ### img
 		- images
-	- ### data 
+		- ### data 
 		- final exported data goes here
-	- ### index.html
+		- ### index.html
 		- and *other html links* that will automatically show up in the github pages deployment
-- ## drafts 
-	- *everything under the sun, per team member as a separate folder*
-- ## ***start_app.bat***
+		- ## drafts 
+		- *everything under the sun, per team member as a separate folder*
+		- ## ***start_app.bat***
 
 
 back to [[Project Development Journal Entries]]
