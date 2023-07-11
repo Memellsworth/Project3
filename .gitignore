@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 drafts/alberto/texas_2022_delays.csv
 drafts/rawdata/iahhist/Detailed_Statistics_Departures (10).csv
+drafts/alberto/rawdata.db
