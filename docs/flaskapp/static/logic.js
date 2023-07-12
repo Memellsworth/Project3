@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
     }).addTo(map);
-
-
-
-    
+   
 });
 

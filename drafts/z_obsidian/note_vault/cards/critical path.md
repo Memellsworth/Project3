@@ -4,12 +4,12 @@
 
 - [x] Data components used in the project are clearly documented. 
 - [x] The dataset contains at least 100 unique records. 
-- [ ] A database is used to house the data (SQL, MongoDB, SQLite, etc.). 
-- [ ] The project is powered by a Python Flask API and includes HTML/CSS, JavaScript, and the chosen database. 
+- [x] A database is used to house the data (SQL, **MongoDB**, SQLite, etc.). 
+- [x] The project is powered by a Python Flask API and includes HTML/CSS, JavaScript, and the chosen database. 
 	- [x] python flask api
 	- [x] html/css
 	- [x] javascript
-	- [ ] database connection
+	- [x] database connection
 
 #### Back End 
 

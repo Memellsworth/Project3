@@ -4,12 +4,15 @@ import os
 import json
 import time
 from datetime import datetime, timedelta
+from pymongo import MongoClient
+import os
+
 
 app = Flask(__name__)
 
 # ... existing routes ...
 
-@app.route('/setup')
+@app.route('/setup', methods=['GET', 'POST'])
 def setup():
     return render_template('setup.html')
 
@@ -17,50 +20,31 @@ def setup():
 def home():
     return render_template('index.html')
 
-@app.route('/weather', methods=['POST'])
-def get_weather():
-    api_key = request.form['api_key']
-    city = request.form['city']
-
-    if not api_key or not city:
-        return render_template('weather_popup.html', error_message='Missing api_key or city')
-
-    # code to handle user input for origin or destination
-    # By default, assume Houston is the other city
-    other_city = 'Houston'
-    user_input = request.form.get('user_input')
-    
-    if user_input:
-        other_city = user_input
-
-    # Write the API key to a file
-    with open('api_key.py', 'w') as f:
-        f.write(f'api_key = "{api_key}"\n')
-
-    # Get the lat/long for the city
-    response = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={city},us&limit=1&appid={api_key}')
-    
-    if response.status_code != 200:
-        return render_template('weather_popup.html', error_message='Failed to get weather data')
-
-
-    lat, lon = response.json()[0]['lat'], response.json()[0]['lon']
-
-    # Get the weather data for the last year
-    end = int(datetime(2022, 12, 31).timestamp())
-    start = int(datetime(2022, 1, 1).timestamp())
-
-    response = requests.get(f'https://history.openweathermap.org/data/2.5/history/city?lat={lat}&lon={lon}&type=hour&start={start}&end={end}&appid={api_key}')
-    
-    weather_data = response.json()
-
-    # Save the weather data to a file
-    with open('local_weather.json', 'w') as f:
-        json.dump(weather_data, f)
-
-    return render_template('weather_popup.html', weather_data=weather_data)
-
 # ... additional routes ...
+
+@app.route('/api/data', methods=['GET'])
+def connect_to_mongodb():
+    uri = "mongodb+srv://analysis:uUn0sOsNLAWe403r@flightdelay0.xkb2gjb.mongodb.net/test?retryWrites=true&w=majority"
+    client = MongoClient(uri)
+    db = client['maindb']
+    coll_airports = db['full_detail_airports']
+    coll_current = db['raw_current']
+    coll_airlines = db['carrier_key_table']
+    return coll_airports, coll_current, coll_airlines
+
+@app.route('/api/document_counts', methods=['GET'])
+def get_document_counts():
+    coll_airports, coll_current, coll_airlines = connect_to_mongodb()
+
+    # Retrieve the document counts
+    counts = {
+        'coll_airports': coll_airports.count_documents({}),
+        'coll_current': coll_current.count_documents({}),
+        'coll_airlines': coll_airlines.count_documents({})
+    }
+
+    # Return the counts as a JSON response
+    return jsonify(counts)
 
 if __name__ == '__main__':
     app.run()

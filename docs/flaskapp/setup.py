@@ -2,7 +2,7 @@ import tkinter as tk
 import os
 import subprocess
 import webbrowser
-
+import platform
 
 def start_flask():
     webbrowser.open('http://127.0.0.1:5000/setup')

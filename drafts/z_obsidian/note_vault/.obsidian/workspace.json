@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cards/data sources.md",
+                "file": "cards/critical path.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cards/data sources.md",
+                "file": "cards/critical path.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cards/data sources.md",
+                "file": "cards/critical path.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cards/data sources.md"
+                "file": "cards/critical path.md"
               }
             }
           }
@@ -150,23 +150,24 @@
   },
   "active": "f2b9cb4cebc00c82",
   "lastOpenFiles": [
-    "cards/user experience_update01.md",
-    "cards/data sources.md",
-    "cards/database schema and relates.md",
-    "Project Development Journal Entries.md",
-    "cards/front-end website development.md",
-    "else/Pasted image 20230710190421.png",
     "cards/back-end notes.md",
     "cards/critical path.md",
     "cards/csvglob.md",
+    "cards/data sources.md",
     "cards/data visualization.md",
     "cards/final presentation.md",
     "cards/milestone path.md",
+    "cards/front-end website development.md",
     "cards/sketching out the vision.md",
     "cards/user experience and interface.md",
+    "cards/database schema and relates.md",
+    "cards/user experience_update01.md",
+    "cards/user experience_update02.md",
     "cards/vision 1-pager.md",
     "cards/web scraping.md",
-    "cards/user experience_update02.md",
+    "Project Development Journal Entries.md",
+    "else/Pasted image 20230711215919.png",
+    "else/Pasted image 20230710190421.png",
     "else/Pasted image 20230710182136.png",
     "else/Pasted image 20230710182127.png",
     "else/Pasted image 20230710181647.png",
@@ -179,7 +180,6 @@
     "else/Pasted image 20230705230552.png",
     "else/weather data.png",
     "else/Pasted image 20230705225010.png",
-    "else/Pasted image 20230705230725.png",
     "else",
     "[[Project.md",
     "www.example.com.md",
