@@ -1,0 +1,144 @@
+,Airport Code,Airport Name,City,State,Lat,Long,Hotel Name,Hotel Address
+0,MIA,Miami International Airport,Miami,Florida,25.795864,-80.28705,Miami International Airport Hotel,"2100 Northwest 42nd Avenue, Miami, FL 33142, United States of America"
+1,DFW,Dallas/Fort Worth International Airport,DFW Airport,Texas,32.89981,-97.04034,Hyatt Regency DFW International Airport,"2334 Terminal C, Grapevine, TX 75261, United States of America"
+2,JFK,John F. Kennedy International Airport,,New York,40.64131,-73.77814,TWA Hotel,"1 Idlewild Drive, New York, NY 11430, United States of America"
+3,CLT,Charlotte Douglas International Airport,Charlotte,North Carolina,35.2144,-80.94731,,
+4,PHX,Phoenix Sky Harbor International Airport,Phoenix,Arizona,33.437267,-112.00779,SureStay Hotel by Best Western,"3037 East Van Buren Street, Phoenix, AZ 85008, United States of America"
+5,PHL,Philadelphia International Airport,Philadelphia,Pennsylvania,39.874397,-75.242424,Philadelphia Airport Marriott,"PA 291, Philadelphia, PA 19153, United States of America"
+6,ORD,O'Hare International Airport,Chicago,Illinois,41.974163,-87.90732,Hilton Chicago O'Hare Airport,"O'Hare Commercial Departure, Chicago, IL 60666, United States of America"
+7,LAX,Los Angeles International Airport,Los Angeles,California,33.94159,-118.40853,Hyatt Regency Los Angeles International Airport,"6225 West Century Boulevard, Los Angeles, CA 90045, United States of America"
+8,LGA,LaGuardia Airport,New York,New York,40.776928,-73.87396,Clarion Hotel,"95th Street, New York, NY 11369, United States of America"
+9,BOS,Logan International Airport,Boston,Massachusetts,42.365612,-71.00956,Hilton Boston Logan Airport,"1 Hotel Drive, Boston, MA 02128, United States of America"
+10,TPA,Tampa International Airport,Tampa,Florida,27.983479,-82.53708,Tampa Airport Marriott,"4200 George J. Bean Parkway, Tampa, FL 33634, United States of America"
+11,DAL,Dallas Love Field,Dallas,Texas,32.848103,-96.851204,Embassy Suites,"West Northwest Highway, Dallas, TX 75220, United States of America"
+12,DEN,Denver International Airport,Denver,Colorado,39.8561,-104.67374,The Westin Denver International Airport,"8300 Peña Boulevard, Denver, CO 80249, United States of America"
+13,LAS,McCarran International Airport,Las Vegas,Nevada,36.084,-115.15374,Best Western McCarran Inn,"4970 Paradise Road, Las Vegas, NV 89119, United States of America"
+14,MSY,Louis Armstrong New Orleans International Airport,Kenner,Louisiana,29.9922,-90.25901,Hilton New Orleans Airport,"901 Airline Drive, Kenner, LA 70062, United States of America"
+15,MDW,Midway International Airport,Chicago,Illinois,41.786777,-87.75219,Hilton Garden Inn Chicago/Midway Airport,"6530 South Cicero Avenue, Bedford Park, IL 60638, United States of America"
+16,MCO,Orlando International Airport,Orlando,Florida,28.431158,-81.30808,Hyatt Regency Orlando International Airport,"To Airside 4 (Center), Orlando, FL 32827, United States of America"
+17,BNA,Nashville International Airport,Nashville,Tennessee,36.126316,-86.67737,Nashville - Days Inn Airport / Opryland Area,"1 International Plaza, Nashville-Davidson, TN 37217, United States of America"
+18,ATL,Hartsfield–Jackson Atlanta International Airport,Atlanta,Georgia,33.640728,-84.427704,Renaissance Concourse Atlanta Airport Hotel,"1 Toffie Terrace, Atlanta, GA 30354, United States of America"
+19,SAN,San Diego International Airport,San Diego,California,32.7338,-117.193306,The Sheraton San Diego Hotel & Marina,"Harbor Island Drive, San Diego, CA 92147, United States of America"
+20,MCI,Kansas City International Airport,Kansas City,Missouri,39.299118,-94.71078,Kansas City Airport Marriott,"775 North Brasilia Avenue, Kansas City, MO 64153, United States of America"
+21,FLL,Fort Lauderdale–Hollywood International Airport,Fort Lauderdale,Florida,26.074234,-80.150604,Le Méridien Dania Beach at Fort Lauderdale Airport,"1825 Griffin Road, Dania Beach, FL 33004, United States of America"
+22,DTW,Detroit Metropolitan Wayne County Airport,Detroit,Michigan,42.21617,-83.355385,The Westin,"Level 2 Gates, Romulus, MI 48174, United States of America"
+23,BWI,Baltimore/Washington International Thurgood Marshall Airport,Baltimore,Maryland,39.177402,-76.668396,,
+24,EWR,Newark Liberty International Airport,Newark,New Jersey,40.689533,-74.17446,Marriott Newark Airport,"Hotel Road, Newark, NJ 07114, United States of America"
+25,ACY,Atlantic City International Airport,Egg Harbor Township,New Jersey,39.455776,-74.57251,,
+26,MSP,Minneapolis–Saint Paul International Airport (Wold–Chamberlain Field),,Minnesota,44.884754,-93.22228,Kittyhawk Avenue,"Minneapolis, MN 55450, United States of America"
+27,SEA,Seattle–Tacoma International Airport,Seattle,Washington,47.45025,-122.308815,Red Roof Inn,"16838 International Boulevard, SeaTac, WA 98158, United States of America"
+28,OAK,Oakland International Airport,Oakland,California,37.71257,-122.21974,Extended Stay America - Oakland - Alameda Airport,"1260 South Loop Road, Alameda, CA 94502, United States of America"
+29,MYR,Myrtle Beach International Airport,Myrtle Beach,South Carolina,33.6822,-78.927895,Harrelson Boulevard,"Myrtle Beach, SC 29577, United States of America"
+30,AUS,Austin–Bergstrom International Airport,Austin,Texas,30.197472,-97.66635,Hyatt Place Austin Airport,"Presidential Boulevard, Austin, TX 78742, United States of America"
+31,PIT,Pittsburgh International Airport,Pittsburgh,Pennsylvania,40.495773,-80.24131,Hyatt Regency Pittsburgh International Airport,"Airport Boulevard, Findlay Township, PA 15231, United States of America"
+32,SFO,San Francisco International Airport,San Francisco,California,37.62131,-122.37895,Grand Hyatt at SFO,"55 South McDonnell Road, South San Francisco, CA 94128, United States of America"
+33,RDU,Raleigh–Durham International Airport,Morrisville,North Carolina,35.880077,-78.787994,,
+34,EGE,Eagle County Regional Airport,Gypsum,Colorado,39.64015,-106.913605,,
+35,IAD,Washington Dulles International Airport,Dulles,Virginia,38.953117,-77.456535,Washington Dulles Airport Marriott,"45020 Aviation Drive, Dulles Town Center, VA 20166, United States of America"
+36,HNL,Honolulu International Airport,Honolulu,Hawaii,21.324512,-157.92508,Best Western The Plaza Hotel,"Camp Catline Road, Honolulu, HI 96820, United States of America"
+37,RNO,Reno–Tahoe International Airport,Reno,Nevada,39.49959,-119.7681,Aloft Reno-Tahoe International Airport,"2015 Terminal Way, Reno, NV 89502, United States of America"
+38,DCA,Ronald Reagan Washington National Airport,Arlington,Virginia,38.851242,-77.04023,Hyatt Regency Crystal City at Reagan National Airport,"2799 Richmond Highway, Arlington, VA 22202, United States of America"
+39,PDX,Portland International Airport,Portland,Oregon,45.58977,-122.59509,Sheraton Portland Airport,"8235 Northeast Airport Way, Portland, OR 97220, United States of America"
+40,SNA,John Wayne Airport (Orange County Airport),Santa Ana,California,33.67619,-117.86748,Hilton Irvine/Orange County Airport,"18800 MacArthur Boulevard, Irvine, CA 92612, United States of America"
+41,CLE,Cleveland Hopkins International Airport,Cleveland,Ohio,41.4058,-81.85387,Sheraton Cleveland Airport Hotel (Permanently Closed),"Park Road, Cleveland, OH 44142, United States of America"
+42,GUC,Gunnison–Crested Butte Regional Airport,Gunnison,Colorado,38.53725,-106.9354,Holiday Inn Express & Suites - Gunnison,"College Avenue, Gunnison, CO 81230, United States of America"
+43,PBI,Palm Beach International Airport,West Palm Beach,Florida,26.685747,-80.09282,Home2 Suites by Hilton West Palm Beach Airport,"2375 James L Turnage Boulevard, West Palm Beach, FL 33406, United States of America"
+44,MFE,McAllen Miller International Airport,McAllen,Texas,26.17822,-98.24096,Wingate,"Wichita Avenue, McAllen, TX 78503, United States of America"
+45,ONT,Ontario International Airport,Ontario,California,34.055977,-117.59806,Holiday Inn Ontario Airport,"2155 Convention Center Way, Ontario, CA 91764, United States of America"
+46,SMF,Sacramento International Airport,Sacramento,California,38.695084,-121.590065,,
+47,SLC,Salt Lake City International Airport,Salt Lake City,Utah,40.78994,-111.97907,,
+48,RSW,Southwest Florida International Airport,Fort Myers,Florida,26.533705,-81.75531,,
+49,SAT,San Antonio International Airport,San Antonio,Texas,29.531197,-98.468346,Courtyard by Marriott San Antonio Airport,"8615 Gulfmart Street, San Antonio, TX 78217, United States of America"
+50,SJC,San Jose International Airport,San Jose,California,37.36395,-121.92894,Sonesta Select San Jose Airport,"1727 Technology Drive, San Jose, CA 95110, United States of America"
+51,SJU,Luis Muñoz Marín International Airport,Carolina,Carolina,18.437422,-66.00162,San Juan Airport Hotel,"SJU Arrivals Lower Level, Carolina, PR 00979, United States of America"
+52,HDN,Yampa Valley Airport,Hayden,Colorado,40.481403,-107.21661,,
+53,MTJ,Montrose Regional Airport,Montrose,Colorado,38.50038,-107.89914,Hampton Inn Montrose,"1980 North Townsend Avenue, Montrose, CO 81401, United States of America"
+54,OKC,Will Rogers World Airport,Oklahoma City,Oklahoma,35.393055,-97.600555,,
+55,IND,Indianapolis International Airport,Indianapolis,Indiana,39.716858,-86.29559,,
+56,JAC,Jackson Hole Airport,Jackson,Wyoming,43.60841,-110.73665,,
+57,MEM,Memphis International Airport,Memphis,Tennessee,35.04207,-89.97917,,
+58,OMA,Eppley Airfield,Omaha,Nebraska,41.301872,-95.89374,,
+59,ORF,Norfolk International Airport,Norfolk,Virginia,36.895683,-76.20002,Fairfield Inn & Suites by Marriott Virginia Beach/Norfolk Airport,"5800 Burton Station Road, Virginia Beach, VA 23455, United States of America"
+60,ABQ,Albuquerque International Sunport,Albuquerque,New Mexico,35.043335,-106.61291,Sheraton Albuquerque Airport Hotel,"2910 Yale Boulevard Southeast, Albuquerque, NM 87106, United States of America"
+61,JAX,Jacksonville International Airport,Jacksonville,Florida,30.494072,-81.687935,DoubleTree by Hilton Hotel Jacksonville Airport,"2101 Dixie Clipper Drive, Jacksonville, FL 32218, United States of America"
+62,TUS,Tucson International Airport,Tucson,Arizona,32.11451,-110.939224,Four Points by Sheraton Tucson Airport,"South Tucson Boulevard, Tucson, AZ 85706, United States of America"
+63,MAF,Midland International Air and Space Port,Midland,Texas,31.941738,-102.20475,Baymont by Wyndham Midland Airport,"3312 Fortress Drive, Midland, TX 79706, United States of America"
+64,TUL,Tulsa International Airport,Tulsa,Oklahoma,36.198776,-95.883865,Hilton Garden Inn Tulsa Airport,"7728 East Virgin Court, Tulsa, OK 74115, United States of America"
+65,CVG,Cincinnati/Northern Kentucky International Airport,Hebron,Kentucky,39.053276,-84.66302,DoubleTree by Hilton Hotel Cincinnati Airport,"2826 Terminal Drive, Hebron, KY 41048, United States of America"
+66,DSM,Des Moines International Airport,Des Moines,Iowa,41.534134,-93.6588,Holiday Inn,"Leland Avenue, Des Moines, IA 50315, United States of America"
+67,STL,Lambert–St. Louis International Airport,St. Louis,Missouri,38.751648,-90.37153,Hampton Inn St. Louis-Airport,"10820 Pear Tree Lane, St. Ann, MO 63074, United States of America"
+68,CHS,Charleston International Airport / Charleston Air Force Base,Charleston,South Carolina,32.894268,-80.03816,Howard Johnson N Charleston,"Fain Street, North Charleston, SC 29406, United States of America"
+69,PNS,Pensacola International Airport,Pensacola,Florida,30.473816,-87.18671,Hyatt Place,"161 Airport Lane, Pensacola, FL 32504, United States of America"
+70,STT,Cyril E. King Airport,Charlotte Amalie West,St. Thomas,18.336061,-64.972275,Carib Beach Resort,"Airport Road, Charlotte Amalie West, VI 00803, United States of America"
+71,CMH,John Glenn Columbus International Airport,Columbus,Ohio,39.99994,-82.88718,Residence Inn,"Sawyer Road, Columbus, OH 43219, United States of America"
+72,RIC,Richmond International Airport,Richmond,Virginia,37.50658,-77.32081,Sheraton Richmond Airport Hotel,"5501 Eubank Road, Henrico County, VA 23150, United States of America"
+73,BZN,Bozeman Yellowstone International Airport (Gallatin Field),,Montana,45.775135,-111.16135,,
+74,PSP,Palm Springs International Airport,Palm Springs,California,33.83032,-116.50705,,
+75,ICT,Wichita Dwight D. Eisenhower National Airport,Wichita,Kansas,37.650852,-97.428696,Hilton Wichita Airport,"2098 Eisenhower Airport Parkway, Wichita, KS 67209, United States of America"
+76,BHM,Birmingham–Shuttlesworth International Airport,Birmingham,Alabama,33.562428,-86.75413,Ramada by Wyndham Birmingham Airport,"5216 Messer Airport Highway, Birmingham, AL 35212, United States of America"
+77,ELP,El Paso International Airport,El Paso,Texas,31.805336,-106.38243,Wyndam El Paso Airport,"2027 Airway Boulevard, El Paso, TX 79925, United States of America"
+78,CRP,Corpus Christi International Airport,Corpus Christi,Texas,27.772423,-97.50218,,
+79,ANC,Ted Stevens Anchorage International Airport,Anchorage,Alaska,61.175888,-149.99008,,
+80,BTR,Baton Rouge Metropolitan Airport (Ryan Field),Baton Rouge,Louisiana,30.53236,-91.15146,Comfort Inn & Suites Airport,"Varsity Street, Baton Rouge, LA 70807, United States of America"
+81,SAV,Savannah/Hilton Head International Airport,Savannah,Georgia,32.129425,-81.20185,Days Inn by Wyndham Savannah Airport,"2500 Dean Forest Road, Savannah, GA 31408, United States of America"
+82,GRR,Gerald R. Ford International Airport,Grand Rapids,Michigan,42.884663,-85.52484,,
+83,GSP,Greenville–Spartanburg International Airport,Greer,South Carolina,34.8959,-82.21723,,
+84,BDL,Bradley International Airport,Windsor Locks,Connecticut,41.938873,-72.686035,Sheraton Hartford Hotel at Bradley Airport,"Robert F. Juliano Highway, Windsor Locks, CT 06064, United States of America"
+85,SDF,Louisville International Airport (Standiford Field),Louisville,Kentucky,38.175663,-85.73692,Red Roof Inn Louisville Airport,"4708 Preston Highway, Louisville, KY 40213, United States of America"
+86,AGS,Augusta Regional Airport at Bush Field,Augusta,Georgia,33.368855,-81.96577,,
+87,SRQ,Sarasota–Bradenton International Airport,Sarasota,Florida,27.395538,-82.55451,Holiday Inn Sarasota-Airport,"Innovation Way, Tallevast, FL 34270, United States of America"
+88,FCA,Glacier Park International Airport (FAA: GPI),Kalispell,Montana,48.307663,-114.25253,,
+89,MSN,Dane County Regional Airport (Truax Field),Madison,Wisconsin,43.139065,-89.33641,,
+90,XNA,Northwest Arkansas Regional Airport,Bentonville,Arkansas,36.27866,-94.30429,,
+91,CLL,Easterwood Airport (Easterwood Field),College Station,Texas,30.591007,-96.36276,,
+92,TYS,McGhee Tyson Airport,Alcoa,Tennessee,35.810833,-83.99389,Hilton Knoxville Airport,"McGhee Place, Alcoa, TN 37701, United States of America"
+93,COS,Colorado Springs Airport,Colorado Springs,Colorado,38.801712,-104.70261,Radisson Hotel Colorado Springs Airport,"1645 North Newport Road, Colorado Springs, CO 80916, United States of America"
+94,GRK,Killeen–Fort Hood Regional Airport / Robert Gray Army Airfield,Killeen,Texas,31.06713,-97.828,,
+95,LCH,Lake Charles Regional Airport,Lake Charles,Louisiana,30.122997,-93.221115,,
+96,AEX,Alexandria International Airport,Alexandria,Louisiana,31.327412,-92.54519,,
+97,AMA,Rick Husband Amarillo International Airport,Amarillo,Texas,35.220325,-101.70745,,
+98,LRD,Laredo International Airport,Laredo,Texas,27.544783,-99.46136,Staybridge Suites,"7010 Bob Bullock Loop, Laredo, TX 78041, United States of America"
+99,HSV,Huntsville International Airport (Carl T. Jones Field),Huntsville,Alabama,34.64033,-86.77569,,
+100,JAN,Jackson–Evers International Airport,Jackson,Mississippi,32.31223,-90.07642,Sheraton-Refuge Hotel And Conference Center,"Refuge Boulevard, Flowood, MS 39232, United States of America"
+101,VPS,Destin–Fort Walton Beach Airport / Eglin Air Force Base,Eglin Air Force Base,Florida,30.495466,-86.549866,,
+102,TYR,Tyler Pounds Regional Airport,Tyler,Texas,32.351128,-95.40963,,
+103,BRO,Brownsville/South Padre Island International Airport,Brownsville,Texas,25.906326,-97.42699,,
+104,LIT,Clinton National Airport (Adams Field),Little Rock,Arkansas,34.730705,-92.22166,Comfort Inn & Suites Airport,"4301 East Roosevelt Road, Little Rock, AR 72206, United States of America"
+105,MOB,Mobile Regional Airport,Mobile,Alabama,30.691904,-88.244156,,
+106,CRW,Yeager Airport,Charleston,West Virginia,38.37145,-81.59349,,
+107,LFT,Lafayette Regional Airport,Lafayette,Louisiana,30.205482,-91.98942,Days Inn by Wyndham Lafayette Near Lafayette Airport,"2501 Southeast Evangeline Thruway, Lafayette, LA 70508, United States of America"
+108,DRT,Del Rio International Airport,Del Rio,Texas,29.370586,-100.92021,,
+109,CAE,Columbia Metropolitan Airport,West Columbia,South Carolina,33.941917,-81.122,,
+110,SHV,Shreveport Regional Airport,Shreveport,Louisiana,32.45449,-93.82865,Hampton,"5226 Monkhouse Drive, Shreveport, LA 71109, United States of America"
+111,LBB,Lubbock Preston Smith International Airport,Lubbock,Texas,33.656925,-101.82164,,
+112,CID,The Eastern Iowa Airport,Cedar Rapids,Iowa,41.886387,-91.70698,,
+113,MKE,General Mitchell International Airport,Milwaukee,Wisconsin,42.94755,-87.896645,Four Points by Sheraton Milwaukee Airport,"5311 South Howell Avenue, Milwaukee, WI 53207, United States of America"
+114,MLU,Monroe Regional Airport,Monroe,Louisiana,32.51023,-92.043625,Residence Inn by Marriott Monroe,"4960 Millhaven Road, Monroe, LA 71203, United States of America"
+115,GPT,Gulfport–Biloxi International Airport,Gulfport,Mississippi,30.413115,-89.07278,Residence Inn,"14100 Airport Road, Gulfport, MS 39501, United States of America"
+116,HOB,Lea County Regional Airport,Hobbs,New Mexico,32.69235,-103.21436,,
+117,GJT,Grand Junction Regional Airport (Walker Field),Grand Junction,Colorado,39.11958,-108.52879,Residence Inn Grand Junction,"767 Horizon Drive, Grand Junction, CO 81506, United States of America"
+118,LEX,Blue Grass Airport,Lexington,Kentucky,38.03776,-84.60261,,
+119,HRL,Valley International Airport,Harlingen,Texas,26.226408,-97.65397,,
+120,ISN,Sloulin Field International Airport,Williston,North Dakota,48.17737,-103.636734,Candlewood Suites,"38th Street West, Williston, ND 58801, United States of America"
+121,PIA,General Wayne A. Downing Peoria International Airport,Peoria,Illinois,40.66664,-89.69163,,
+122,ECP,Northwest Florida Beaches International Airport,Panama City,Florida,30.357824,-85.7938,,
+123,SGF,Springfield–Branson National Airport,Springfield,Missouri,37.24432,-93.38883,,
+124,CAK,Akron-Canton Airport,North Canton,Ohio,40.91538,-81.44189,Hilton Garden Inn Akron-Canton Airport,"5251 Landmark Boulevard, North Canton, OH 44720, United States of America"
+125,DAY,Dayton International Airport,Dayton,Ohio,39.902523,-84.22177,,
+126,SAF,Santa Fe Municipal Airport,Santa Fe,New Mexico,35.618256,-106.08453,,
+127,BPT,Jack Brooks Regional Airport,Beaumont,Texas,29.955847,-94.02207,,
+128,RAP,Rapid City Regional Airport,Rapid City,South Dakota,44.043514,-103.05725,,
+129,BFL,Meadows Field Airport,Bakersfield,California,35.43291,-119.05662,Fairfield Inn & Suites,"8700 CA 65, Bakersfield, CA 93308, United States of America"
+130,ASE,Aspen–Pitkin County Airport (Sardy Field),Aspen,Colorado,39.22002,-106.86452,The Inn at Aspen,"38750 CO 82, Aspen, CO 81611, United States of America"
+131,BOI,Boise Air Terminal (Gowen Field),Boise,Idaho,43.565823,-116.22231,Best Western,"2645 West Airport Way, Boise, ID 83705, United States of America"
+132,PIB,Hattiesburg–Laurel Regional Airport,Moselle,Mississippi,31.468239,-89.33542,,
+133,ABI,Abilene Regional Airport,Abilene,Texas,32.411896,-99.680046,,
+134,MEI,Meridian Regional Airport (Key Field),Meridian,Mississippi,32.333546,-88.745155,,
+135,VCT,Victoria Regional Airport,Victoria,Texas,28.852345,-96.91994,,
+136,CHA,Chattanooga Metropolitan Airport (Lovell Field),Chattanooga,Tennessee,35.03745,-85.197014,Extended Stay America - Chattanooga - Airport,"Airpark Drive, Chattanooga, TN 37421, United States of America"
+137,TLH,Tallahassee International Airport,Tallahassee,Florida,30.395407,-84.345055,,
+138,SJT,San Angelo Regional Airport (Mathis Field),San Angelo,Texas,31.357288,-100.50294,,
+139,JLN,Joplin Regional Airport,Webb City,Missouri,37.157475,-94.501595,,
+140,DRO,Durango–La Plata County Airport,Durango,Colorado,37.150608,-107.75326,,
+141,GSO,Piedmont Triad International Airport,Greensboro,North Carolina,36.104366,-79.93518,Greensboro-High Point Marriott Airport,"1 Hotel Drive, Greensboro, NC 27409, United States of America"
+142,ILG,Wilmington Airport (New Castle Airport),New Castle,Delaware,39.680202,-75.60346,Sheraton,"Airport Road, Christiana Acres, DE 19720, United States of America"
