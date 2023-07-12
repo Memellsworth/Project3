@@ -4,6 +4,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     const carriers = data.map(d => d.carrier_name);
     const numFlights = data.map(d => d.arr_flights);
     const arrDelay = data.map(d => d.arr_delay);
+    const carrierDelay = data.map(d => d.carrier_delay);
     const airlineNames = [];
     const dec = [];
     const decDelay = [];
@@ -23,6 +24,9 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     let trace = {
       x: carriers,
       y: numFlights,
+      marker: {
+        color: "#00203F"
+      },
       type: "bar"
     };
 
@@ -69,13 +73,44 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     };
 
     let layout2 = {
-      title: "December 2022 Flight Delays",
+      title: "2022 Flight Delays by Months",
       showlegend: false,
       height: 500,
       width: 500
     };
 
     Plotly.newPlot("heatmap", [trace2], layout2);
+
+    let trace3 = {
+      x: airlineNames,
+      y: arrDelay,
+      marker: {
+        color: "#00203F"
+      },
+      name: "Arrival Delay",
+      type: 'bar'
+    };
+
+    let trace4 = {
+      x: airlineNames,
+      y: carrierDelay,
+      marker: {
+        color: "#ADEFD1"
+      },
+      name: "Carrier Delay",
+      type: 'bar'
+    };
+
+    var data = [trace3, trace4];
+
+    let layout3 = {
+      barmode: 'stack',
+      title: "2022 Arrival & Carrier Delay by Airlines ",
+      height: 500,
+      width: 500
+    };
+
+    Plotly.newPlot("doublebar", data, layout3);
 
   }).catch(function(error) {
     // Handle error if the JSON file fails to load
