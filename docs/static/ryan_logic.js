@@ -1,7 +1,3 @@
-//<<<<<<< HEAD
-//d3.json("/drafts/ryan/delays.json").then(function(data) {
-    //console.log(data);
-//=======
 d3.json("../../drafts/ryan/delays.json").then(function(data) {
     console.log(data);
 //>>>>>>> 3d8dd23b1e7215a35df7d080e34881ef234c7181
