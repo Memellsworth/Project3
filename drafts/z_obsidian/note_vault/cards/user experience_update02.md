@@ -10,16 +10,19 @@ much more instructions, currently have the weather API set-up, pending the geoap
 
 ![[Pasted image 20230710181647.png]]
 
+![[Pasted image 20230711215919.png]]
+
 #### local page build 
 Flask app loads a version of the index.html that is particularly built for the user input.
 
 ![[Pasted image 20230710182136.png]]
 
+
 #### bugfixes 
-- [ ] weather api still doesn't work with developer api key, will test separately 
+- [x] removing weather API
 - [x] local dashboard launches from the flask app.
 	- [x] separate github pages build from local flask app build 
 
 #### new features 
-- [ ] historical data button 
-- [ ] data processing progress bar 
+- [x] historical data button 
+- [x] data processing progress bar replaced with information documents loaded

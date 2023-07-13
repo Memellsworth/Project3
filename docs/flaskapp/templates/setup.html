@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-<script>
-    function openWeatherPopup() {
-            // Open weather data pop-up in a new tab
-        window.open('/weather', '_blank', 'noopener,noreferrer');
-    }
-</script>
+    
 <head>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/check.js"></script>
     <title>Application Setup</title>
     <style>
         body {
@@ -16,7 +14,7 @@
             background-position: center;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,6 +28,7 @@
             border-radius: 15px;
             background-color: rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-content: center;
         }
 
         h1 {
@@ -87,33 +86,15 @@
         <h1>Application Setup
             <h1>Flight Delay Explorer</h1>
         </h1>
-        <div class="text">
-            <h3> Please select the desired city of arrival/departure </h3>
+
+        <div class="container">
+            <button onclick="checkDocumentCounts()" style="position: relative;">Check Document Counts</button>
+            <div id="counts"></div>
         </div>
-        <h6> ** note that the other city will be Houston (IAH) </h6>   
-        <form action="/weather" method="POST">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
-            <h3> Openweather historical API for 2022</h3>
-            <label for="api_key">API Key</label>
-            <input type="text" id="api_key" name="api_key" required>
-            <input type="submit" value="Get Weather">
-        </form>
-       
+        
         <form action="/home" method="POST">
             <input type="submit" value="Launch Dashboard" onclick="window.location.href = window.location.origin + '../../index.html'" />
         </form>
-            <!-- Weather data pop-up -->
-        <div id="weather-popup" style="display: none;">
-            <div id="weather-content">
-            <!-- Content to display weather data -->
-            <!-- Add styling as needed -->
-                <h2>Weather Data</h2>
-            <!-- Populate this section with the weather data -->
-                <p id="weather-message">{{ weather_data }}</p>
-            <button onclick="closeWeatherPopup()">Close</button>
-        </div>
-
 
     </div>
 </body>

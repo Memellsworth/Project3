@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <meta charset="utf-8">
     <title>D3.js Bar Chart Example</title>
     <style>
@@ -21,10 +22,9 @@
   </head>
   <body>
     <h1>Bar Chart Example</h1>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
       // Load the JSON data
-      d3.json("delays.json").then(function(data) {
+      d3.json("./delays.json").then(function(data) {
         // Extract the necessary data
         const carriers = data.map(d => d.carrier);
         const numFlights = data.map(d => d.arr_flights);
@@ -59,5 +59,6 @@
         console.error("Error loading the JSON file:", error);
       });
     </script>
+
   </body>
 </html>

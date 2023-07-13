@@ -1,5 +1,10 @@
-d3.json("/drafts/ryan/delays.json").then(function(data) {
+//<<<<<<< HEAD
+//d3.json("/drafts/ryan/delays.json").then(function(data) {
+    //console.log(data);
+//=======
+d3.json("../../drafts/ryan/delays.json").then(function(data) {
     console.log(data);
+//>>>>>>> 3d8dd23b1e7215a35df7d080e34881ef234c7181
     // Extract the necessary data
     const carriers = data.map(d => d.carrier_name);
     const numFlights = data.map(d => d.arr_flights);
@@ -11,7 +16,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     const decWeather = [];
     const decNumFlights = [];
 
-    for (i=0; i<12; i++) {
+    for (let i=0; i<12; i++) {
       dec.push(data[i]);
       airlineNames.push(data[i].carrier_name);
       decDelay.push(data[i].arr_delay / 60);
@@ -19,7 +24,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
       decNumFlights.push(data[i].arr_flights / 10);
     };
 
-    console.log(airlineNames);
+    //console.log(airlineNames);
 
     let trace = {
       x: carriers,
@@ -31,7 +36,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     };
 
     let layout = {
-      title: "Number of Flights in 2022",
+      title: "Number of Flights in 2022 out of IAH",
       height: 500,
       width: 500
     };
@@ -46,7 +51,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     };
 
     let layout1 = {
-      title: "2022 Delays by Airline",
+      title: "2022 Delays by Airline out of IAH",
       height: 500,
       width: 500
     };
@@ -73,7 +78,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     };
 
     let layout2 = {
-      title: "2022 Flight Delays by Months",
+      title: "2022 Flight Delays by Months out of IAH",
       showlegend: false,
       height: 500,
       width: 500
@@ -101,11 +106,11 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
       type: 'bar'
     };
 
-    var data = [trace3, trace4];
+    var data2 = [trace3, trace4];
 
     let layout3 = {
       barmode: 'stack',
-      title: "2022 Arrival & Carrier Delay by Airlines ",
+      title: "2022 Arrival & Carrier Delay by Airlines out of IAH",
       height: 500,
       width: 500
     };
