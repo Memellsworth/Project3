@@ -9,7 +9,7 @@ import os
 
 
 app = Flask(__name__)
-password = ""
+password = "uUn0sOsNLAWe403r"
 
 # ... existing routes ...
 

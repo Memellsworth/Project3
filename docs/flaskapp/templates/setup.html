@@ -14,7 +14,7 @@
             background-position: center;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,6 +28,7 @@
             border-radius: 15px;
             background-color: rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-content: center;
         }
 
         h1 {
@@ -85,16 +86,25 @@
         <h1>Application Setup
             <h1>Flight Delay Explorer</h1>
         </h1>
+
         <div class="container">
             <button onclick="checkDocumentCounts()" style="position: relative;">Check Document Counts</button>
             <div id="counts"></div>
         </div>
-        
         
         <form action="/home" method="POST">
             <input type="submit" value="Launch Dashboard" onclick="window.location.href = window.location.origin + '../../index.html'" />
         </form>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/check.js"></script>
+    <script>
+        function submitForm() {
+            var password = document.getElementById('password').value;
+            document.getElementById('hiddenPassword').value = password;
+            checkDocumentCounts();
+        }
+    </script>
 </body>
 </html>

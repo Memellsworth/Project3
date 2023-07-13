@@ -3,10 +3,14 @@ import os
 import subprocess
 import webbrowser
 import platform
+import atexit
+
 
 def start_flask():
     webbrowser.open('http://127.0.0.1:5000/setup')
 
+def stop_flask():
+    os.system('taskkill /F /IM python.exe')
 
 root = tk.Tk()
 root.title("Flight Delay Explorer App")
@@ -60,11 +64,10 @@ def open_link(event):
 
 link.bind("<Button-1>", open_link)
 
-def stop_flask():
-    os.system('taskkill /F /IM python.exe')
-
 button_stop = tk.Button(root, text='Stop Server', command=stop_flask, bg='light salmon')
 button_stop.pack(side='bottom', pady=10)
+
+root.protocol("WM_DELETE_WINDOW", stop_flask)
 
 root.mainloop()
 
