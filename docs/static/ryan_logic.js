@@ -1,6 +1,5 @@
 d3.json("../../drafts/ryan/delays.json").then(function(data) {
     console.log(data);
-//>>>>>>> 3d8dd23b1e7215a35df7d080e34881ef234c7181
     // Extract the necessary data
     const carriers = data.map(d => d.carrier_name);
     const numFlights = data.map(d => d.arr_flights);
@@ -20,7 +19,7 @@ d3.json("../../drafts/ryan/delays.json").then(function(data) {
       decNumFlights.push(data[i].arr_flights / 10);
     };
 
-    //console.log(airlineNames);
+    console.log(airlineNames);
 
     let trace = {
       x: carriers,
@@ -111,7 +110,7 @@ d3.json("../../drafts/ryan/delays.json").then(function(data) {
       width: 500
     };
 
-    Plotly.newPlot("doublebar", data, layout3);
+    Plotly.newPlot("doublebar", data2, layout3);
 
   }).catch(function(error) {
     // Handle error if the JSON file fails to load
