@@ -1,4 +1,4 @@
-d3.json("/drafts/ryan/delays.json").then(function(data) {
+d3.json("../../drafts/ryan/delays.json").then(function(data) {
     console.log(data);
     // Extract the necessary data
     const carriers = data.map(d => d.carrier_name);
@@ -11,7 +11,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
     const decWeather = [];
     const decNumFlights = [];
 
-    for (i=0; i<12; i++) {
+    for (let i=0; i<12; i++) {
       dec.push(data[i]);
       airlineNames.push(data[i].carrier_name);
       decDelay.push(data[i].arr_delay / 60);
@@ -101,7 +101,7 @@ d3.json("/drafts/ryan/delays.json").then(function(data) {
       type: 'bar'
     };
 
-    var data = [trace3, trace4];
+    var data2 = [trace3, trace4];
 
     let layout3 = {
       barmode: 'stack',
