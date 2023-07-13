@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory
+from flask import Flask, request, jsonify,redirect, render_template, send_from_directory
 import requests
 import os
 import json
@@ -9,6 +9,7 @@ import os
 
 
 app = Flask(__name__)
+password = ""
 
 # ... existing routes ...
 
@@ -22,9 +23,19 @@ def home():
 
 # ... additional routes ...
 
+@app.route('/api/password_get', methods=['GET'])
+def password_get():
+    return render_template('setup.html')
+
+@app.route('/api/password_submit', methods=['POST'])
+def password_submit():
+    password = request.form.get('password')
+    return redirect('/api/data')
+
 @app.route('/api/data', methods=['GET'])
 def connect_to_mongodb():
-    uri = "mongodb+srv://analysis:uUn0sOsNLAWe403r@flightdelay0.xkb2gjb.mongodb.net/test?retryWrites=true&w=majority"
+    global password
+    uri = f"mongodb+srv://analysis:{password}@flightdelay0.xkb2gjb.mongodb.net/test?retryWrites=true&w=majority"
     client = MongoClient(uri)
     db = client['maindb']
     coll_airports = db['full_detail_airports']
