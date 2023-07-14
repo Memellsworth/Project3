@@ -1,18 +1,3 @@
-function fancychartsss() {
-  // Send AJAX request to API endpoint
-  $.ajax({
-    url: '/api/fancycharts',
-    method: 'GET',
-    success: function(response) {
-      console.log('API:', response);
-      processData(response);
-    },
-    error: function(error) {
-      console.log('Error:', error);
-    }
-  });
-}
-
 // Function to process JSON data using D3
 function processData(data) {
     console.log(data);
@@ -21,6 +6,9 @@ function processData(data) {
     const numFlights = data.map(d => d.arr_flights);
     const arrDelay = data.map(d => d.arr_delay);
     const carrierDelay = data.map(d => d.carrier_delay);
+
+    console.log(carriers);
+
     const airlineNames = [];
     const dec = [];
     const decDelay = [];
@@ -129,6 +117,22 @@ function processData(data) {
     Plotly.newPlot("doublebar", data2, layout3);
 }
 
-function displayError(error) {
-   alert('An error occurred: ' + error);
+function fancychartsss() {
+  // Send AJAX request to API endpoint
+  $.ajax({
+    url: '/api/fancycharts',
+    method: 'GET',
+    success: function(response) {
+      console.log('API:', response);
+
+      // Store the data in a variable
+      var data = response;
+
+      // Process the data through the charts
+      processData(data);
+    },
+    error: function(error) {
+      console.log('Error:', error);
+    }
+  });
 }
