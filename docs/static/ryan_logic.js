@@ -6,17 +6,9 @@ d3.json("../../drafts/ryan/delays.json").then(function(data) {
     const arrDelay = data.map(d => d.arr_delay);
     const carrierDelay = data.map(d => d.carrier_delay);
     const airlineNames = [];
-    const dec = [];
-    const decDelay = [];
-    const decWeather = [];
-    const decNumFlights = [];
 
     for (let i=0; i<12; i++) {
-      dec.push(data[i]);
       airlineNames.push(data[i].carrier_name);
-      decDelay.push(data[i].arr_delay / 60);
-      decWeather.push(data[i].weather_delay);
-      decNumFlights.push(data[i].arr_flights / 10);
     };
 
     console.log(airlineNames);
