@@ -1,4 +1,4 @@
-d3.json("../flaskapp/data/delays.json").then(function(data) {
+d3.json("./flaskapp/data/delays.json").then(function(data) {
     console.log(data);
     // Extract the necessary data
     const carriers = data.map(d => d.carrier_name);
