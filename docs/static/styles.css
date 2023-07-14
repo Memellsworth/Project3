@@ -73,8 +73,21 @@ nav ul li ul li a:hover {
   background-color: #3D4D6E
 }
 
+.chartbox {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap: wrap; /* Allow charts to wrap to the next row */
+  justify-content: center; /* Center the charts horizontally */
+  align-items: center; /* Center the charts vertically */
+  padding: 20px;
+  z-index: 2;
+  text-align: center;
+}
 
-
+.chartbox td {
+  flex: 1 1 50%; /* Each chart takes up 50% width */
+  padding: 10px; /* Add padding around each chart */
+}
 
 
 .header {
