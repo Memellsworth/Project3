@@ -128,12 +128,12 @@ nav ul li ul li a:hover {
     padding: 10px;
 }
 
-#map { height: 50vh; }
+#map { height: 95vh; }
 .map-container {
   display: grid;
   background-color: #f5f5f5;
   position: relative;
-  z-index: 2;
+  z-index: -1;
 }
 
 
