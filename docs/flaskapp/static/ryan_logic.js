@@ -1,42 +1,15 @@
-// Import the required libraries
-const MongoClient = require('mongodb').MongoClient;
-const Plotly = require('plotly.js-dist');
-
-// MongoDB connection URI
-const uri = "mongodb+srv://analysis:uUn0sOsNLAWe403r@delay2022r0.xduazyv.mongodb.net/?retryWrites=true&w=majority";
-
-// Create a new MongoClient and connect to the server
-const client = new MongoClient(uri, { useUnifiedTopology: true });
-
-// Function to read JSON data using D3
-function readJSONData() {
-  // Connect to MongoDB
-  client.connect(function(err) {
-    if (err) {
-      console.error("Error connecting to MongoDB:", err);
-      return;
+function fancychartsss() {
+  // Send AJAX request to API endpoint
+  $.ajax({
+    url: '/api/fancycharts',
+    method: 'GET',
+    success: function(response) {
+      console.log('API:', response);
+      processData(response);
+    },
+    error: function(error) {
+      console.log('Error:', error);
     }
-
-    console.log("Connected to MongoDB!");
-
-    // Access the database and collection
-    const db = client.db('<your_database>');
-    const collection = db.collection('<your_collection>');
-
-    // Find and read the JSON data from MongoDB
-    collection.find({}).toArray(function(err, docs) {
-      if (err) {
-        console.error("Error reading JSON data from MongoDB:", err);
-        client.close();
-        return;
-      }
-
-      // Process the JSON data using D3
-      processData(docs);
-
-      // Close the MongoDB connection
-      client.close();
-    });
   });
 }
 
@@ -156,8 +129,6 @@ function processData(data) {
     Plotly.newPlot("doublebar", data2, layout3);
 }
 
-// Call the function to read JSON data
-readJSONData().catch(function(error) {
-  // Handle error if the JSON file fails to load
-  console.error("Error loading the JSON file:", error);
-});
+function displayError(error) {
+   alert('An error occurred: ' + error);
+}
