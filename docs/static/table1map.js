@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Creating the map object centered in Houston
-    let map = L.map("map", {
+    let map = L.map("map1", {
       center: [29.749907, -95.358421],
       zoom: 4
     });

@@ -15,7 +15,7 @@ let config = {
   const lng = -95.358421;
   
   // calling map
-  const map = L.map("map", config).setView([lat, lng], zoom);
+  const map = L.map("map2", config).setView([lat, lng], zoom);
   
   // Used to load and display tile layers on the map
   // Most tile servers require attribution, which you can set under `Layer`
