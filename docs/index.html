@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Flight Delay Dashboard</title>
-    <!-- Plotly -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!-- D3 JavaScript -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="./static/styles.css">
-      <!-- Your JavaScript files -->
-    <script type="text/javascript" src="./static/logic.js"></script>
-    <script type="text/javascript" src="./static/ryan_logic.js"></script>
-      <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"><link/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"><link/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link/>
+    <!-- Deferred/Asyncronous scripts -->
+    <script type="text/javascript" src="./static/main_map.js" defer></script>
+    <script type="text/javascript" src="./static/ryan_logic.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -64,6 +59,12 @@
             <div id="doublebar"></div>
         </div>
     </div>
-    
+
+    <!-- Javascripts -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </body>
 </html>
