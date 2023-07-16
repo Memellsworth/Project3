@@ -5,11 +5,10 @@
     <title>Flight Delay Dashboard</title>
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="./static/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"><link/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"><link/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link/>
-    <!-- Deferred/Asyncronous scripts -->
-    <script type="text/javascript" src="./static/main_map.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Deffered Javascripts -->
     <script type="text/javascript" src="./static/ryan_logic.js" defer></script>
 </head>
 <body>
@@ -34,14 +33,23 @@
                             <li><a href="table3.html">Table 3</a></li>
                         </ul>
                     </li>
-                    
+                
                 </ul>
             </nav>
+
+            <div>
+                <h3>Airline Carriers</h3>
+                <select id="airlines-dropdown"></select>
+            </div>
+            <div id="airline-data">
+                <img id="airline-logo" src="" alt="Airline logo">
+                <p id="other-data"></p>
+            </div>
+            
         </div>
         
         <div class="right-column">
             <div class="map-container">
-                <h3> map here </h3>
                     <div id="map"></div>
                 <!-- Add map content here -->
             </div>
@@ -61,10 +69,13 @@
     </div>
 
     <!-- Javascripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="text/javascript" src="./static/main_map.js" defer></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@3.0.7/dist/esri-leaflet.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./static/logic.js" defer></script>
 
 </body>
 </html>

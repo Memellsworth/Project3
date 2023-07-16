@@ -1,50 +1,115 @@
 let config = {
-    minZoom: 4,
-    maxZoom: 18,
+  minZoom: 4,
+  maxZoom: 18,
+  maxBounds: [
+    [24.396308, -125.000000], // Southwest coordinates
+    [49.384358, -66.934570] // Northeast coordinates
+  ]
 }
-
 // magnification with which the map will start
 const zoom = 6;
 // coordinates
 const lat = 29.749907;
 const lng = -95.358421;
 
-let points = [
-    [52.22922544734814, 21.008997559547428, "point 1"],
-    [52.22941930482576, 21.009861230850223, "point 2"],
-    [52.22966244690615, 21.011084318161014, "point 3"],
-    [52.22980701724154, 21.01167440414429, "point 4"],
-    [52.22998444382795, 21.012511253356937, "point 5"],
-    [52.230188154960125, 21.013487577438358, "point 6"],
-    [52.230299867119605, 21.01395428180695, "point 7"],
-    [51.26191485308451, 17.753906250000004, "point 8"],
-    [51.23440735163461, 17.578125000000004, "point 9"],
-    [50.84757295365389, 17.753906250000004, "point 10"],
-    [50.90303283111257, 18.061523437500004, "point 11"],
-    [51.04139389812637, 17.446289062500004, "point 12"],
-  ];
-
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
 
-// Used to load and display tile layers on the map
-// Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+fetch('./flaskapp/data/airports_key.json')
+.then(response => response.json())
+.then(data => {
+  
+  // Create the marker cluster group
+  let markers = L.markerClusterGroup();
+
+  // Add markers to the layer
+  data.features.forEach(feature => {
+    if (feature.geometry && feature.geometry.coordinates) {
+      const [lng, lat] = feature.geometry.coordinates;
+      const title = feature.properties.name;
+      const municipality = feature.properties.municipality;
+      const elevation = feature.properties.elevation_ft;
+      const rating = feature.properties.score;
+  
+      let marker = L.marker(new L.LatLng(lat, lng))
+      .bindPopup(`<strong>Name:</strong> ${title}<br>
+      <strong>Municipality:</strong> ${municipality}<br>
+      <strong>Elevation:</strong> ${elevation}ft<br>
+      <strong>Score:</strong> ${rating}
+      `);
+      markers.addLayer(marker);
+    }
+  });
+
+  // Add all markers to map
+  map.addLayer(markers);
+
+  // Create custom icon for Houston IAH airport
+  let houstonIcon = L.icon({
+    iconUrl: './img/htown.png',
+    iconSize: [40, 40], 
+    iconAnchor: [20, 20], 
+    popupAnchor: [-3, -76] 
+  });
+
+  // Create marker for Houston IAH airport
+  const houstonLat = 29.9902; // Latitude of Houston IAH airport
+  const houstonLng = -95.3368; // Longitude of Houston IAH airport
+  const houstonMarker = L.marker([houstonLat, houstonLng], {icon: houstonIcon}).addTo(map);
+  houstonMarker.bindPopup("Houston IAH Airport");
+
+});
+
+// Adding the US boundary 
+let serviceLayer = L.esri.featureLayer({
+  url: 'https://gisportal.ers.usda.gov/server/rest/services/Atlas_Reference_Data/Reference_Labels/MapServer/1',
+  style: function(feature) {
+    return {
+      color: '#000', 
+      weight: 1,  
+      opacity: 1,  
+      fill: false, 
+    }
+}
 }).addTo(map);
 
-// L.MarkerClusterGroup extends L.FeatureGroup
-// by clustering the markers contained within
-let markers = L.markerClusterGroup();
 
-// Add markers to the layer
-for (let i = 0; i < points.length; i++) {
-  const [lat, lng, title] = points[i];
+// Adding the US METRO areas only when zoomed in at 6
+let geojsonLayer; 
 
-  let marker = L.marker(new L.LatLng(lat, lng)).bindPopup(title);
-  markers.addLayer(marker);
-}
+map.on('zoomend', function() {
+    var zoomlevel = map.getZoom();
 
-// Add all markers to map
-map.addLayer(markers);
+    // Load the data if the zoom level is 6 or greater
+    if (zoomlevel >= 6) {
+        if (!geojsonLayer) {  // load the data only if it hasn't been loaded yet
+            fetch('https://gisportal.ers.usda.gov/server/rest/services/Rural_Atlas_Data/County_Classifications/MapServer/2/query?where=1%3D1&outFields=*&outSR=4326&f=pgeojson')
+            .then(response => response.json())
+            .then(data => {
+                // Define the style for the layer
+                let layerStyle = feature => ({
+                    stroke: false,
+                    fillColor: feature.properties.Metro2013 > 0 ? '#f00' : '#0f0',
+                    fillOpacity: 0.5
+                });
+
+                geojsonLayer = L.geoJSON(data, { style: layerStyle });  
+                geojsonLayer.addTo(map);
+            });
+        }
+    }
+    // Remove the data if the zoom level is less than 6
+    else {
+        if (geojsonLayer) {  // check if the layer exists
+            map.removeLayer(geojsonLayer);  
+            geojsonLayer = null;  
+        }
+    }
+});
+
+
+// Adding the tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+}).addTo(map);
+
