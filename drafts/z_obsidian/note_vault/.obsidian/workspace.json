@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cards/critical path.md",
+                "file": "Project Development Journal Entries.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cards/critical path.md",
+                "file": "Project Development Journal Entries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cards/critical path.md",
+                "file": "Project Development Journal Entries.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cards/critical path.md"
+                "file": "Project Development Journal Entries.md"
               }
             }
           }
@@ -150,8 +150,8 @@
   },
   "active": "f2b9cb4cebc00c82",
   "lastOpenFiles": [
-    "cards/back-end notes.md",
     "cards/critical path.md",
+    "cards/back-end notes.md",
     "cards/csvglob.md",
     "cards/data sources.md",
     "cards/database schema and relates.md",
