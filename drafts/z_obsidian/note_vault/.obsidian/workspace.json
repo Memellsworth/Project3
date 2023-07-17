@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "bd28da529965d674",
+        "id": "04f4c04e354c08cc",
         "type": "tabs",
         "children": [
           {
-            "id": "f2b9cb4cebc00c82",
+            "id": "40749291c173e8cb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project Development Journal Entries.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project Development Journal Entries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Project Development Journal Entries.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Project Development Journal Entries.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,14 +140,15 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "f2b9cb4cebc00c82",
+  "active": "40749291c173e8cb",
   "lastOpenFiles": [
-    "cards/critical path.md",
+    "Project Development Journal Entries.md",
     "cards/back-end notes.md",
+    "cards/critical path.md",
     "cards/csvglob.md",
     "cards/data sources.md",
-    "cards/database schema and relates.md",
     "cards/data visualization.md",
+    "cards/database schema and relates.md",
     "cards/final presentation.md",
     "cards/front-end website development.md",
     "cards/milestone path.md",
@@ -165,7 +158,10 @@
     "cards/user experience_update02.md",
     "cards/vision 1-pager.md",
     "cards/web scraping.md",
-    "Project Development Journal Entries.md",
+    "cards/user_experience_update03.md",
+    "else/Pasted image 20230717124501.png",
+    "else/Pasted image 20230717123850.png",
+    "else/Pasted image 20230717123718.png",
     "else/Pasted image 20230711215919.png",
     "else/Pasted image 20230710190421.png",
     "else/Pasted image 20230710182136.png",
@@ -177,9 +173,6 @@
     "else/interactive scatter plot.png",
     "else/sketch.excalidraw.md",
     "cards",
-    "else/Pasted image 20230705230552.png",
-    "else/weather data.png",
-    "else/Pasted image 20230705225010.png",
     "else",
     "[[Project.md",
     "www.example.com.md",

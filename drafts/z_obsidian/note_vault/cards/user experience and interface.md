@@ -24,7 +24,7 @@ in short this is the flow this experience looks like;
 # updates 
 - [[user experience_update01]]
 - [[user experience_update02]]
-- user_experience_update03
+- [[user_experience_update03]]
 
 
 back to [[Project Development Journal Entries]]

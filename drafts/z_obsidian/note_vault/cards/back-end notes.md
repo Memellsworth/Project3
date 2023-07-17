@@ -2,10 +2,7 @@
 
 ### getting started 
 
-
-
-
-
+something about using mongo
 
 
 ### folder structure
