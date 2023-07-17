@@ -83,19 +83,21 @@ map.on('zoomend', function() {
     // Load the data if the zoom level is 6 or greater
     if (zoomlevel >= 6) {
         if (!geojsonLayer) {  // load the data only if it hasn't been loaded yet
-            fetch('https://gisportal.ers.usda.gov/server/rest/services/Rural_Atlas_Data/County_Classifications/MapServer/2/query?where=1%3D1&outFields=*&outSR=4326&f=pgeojson')
+            fetch('./flaskapp/data/new_metrodata.geojson')
             .then(response => response.json())
             .then(data => {
+              console.log(data)
                 // Define the style for the layer
                 let layerStyle = feature => ({
                     stroke: false,
-                    fillColor: feature.properties.Metro2013 > 0 ? '#f00' : '#0f0',
+                    fillColor: feature.properties.Metro2013 == 1 ? '#f00' : '#0f0',
                     fillOpacity: 0.5
                 });
 
                 geojsonLayer = L.geoJSON(data, { style: layerStyle });  
                 geojsonLayer.addTo(map);
-            });
+            })
+            .catch(error => console.error('Fetch Error:', error));
         }
     }
     // Remove the data if the zoom level is less than 6

@@ -22,36 +22,54 @@
         <div class="left-column">
             <h3>  </h3>
             <!-- Add content for the left column here -->
-            <nav>
-                <p></p>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Tables</a>
-                        <ul>
-                            <li><a href="table1.html">Table 1</a></li>
-                            <li><a href="table2.html">Table 2</a></li>
-                            <li><a href="table3.html">Table 3</a></li>
-                        </ul>
-                    </li>
-                
-                </ul>
-            </nav>
+
 
             <div>
                 <h3>Airline Carriers</h3>
+                <div>Select from airlines servicing Houston from IAH</div>
                 <select id="airlines-dropdown"></select>
             </div>
             <div id="airline-data">
                 <img id="airline-logo" src="" alt="Airline logo">
-                <p id="other-data"></p>
+                <p id="other-data" style="padding: 20px;"></p>
             </div>
             
+        <div>
+            <h4 style="padding: 20px;">Airports Mapped</h4>
+            The map on the right showcases all airports serviced by IAH. Metro Areas are defined by the USDA, dataset from 2013. 
+        </div>
+
+        <div id="legend" style="background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; width: 150px;">
+            <h3>Metro Area Legend</h3>
+            <div>
+                <div style="background-color: #f00; width: 20px; height: 20px; float: left; margin-right: 5px;"></div> Metro Area
+            </div>
+            <div style="clear: both; margin-top: 10px;">
+                <div style="background-color: #0f0; width: 20px; height: 20px; float: left; margin-right: 5px;"></div> Non-Metro Area
+            </div>
+        </div>
+            
+            <div class="nav-container2">
+                <nav>
+                    <p></p>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tables</a>
+                            <ul>
+                                <li><a href="table1.html">Table 1</a></li>
+                                <li><a href="table2.html">Table 2</a></li>
+                                <li><a href="table3.html">Table 3</a></li>
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </nav>
+            </div>
         </div>
         
         <div class="right-column">
             <div class="map-container">
                     <div id="map"></div>
-                <!-- Add map content here -->
             </div>
         </div>
     </div>
