@@ -1,17 +1,17 @@
 Carrier Code,Airline Carrier,Headquarter City,Nearest Base,Nearest Base City,logo
-9E,Endeavor Air,Minneapolis,ATL,Atlanta,https://en.wikipedia.org/wiki/File:Endeavor_Air_logo.svg
-AA,American Airlines,Forth Worth,DFW,Dallas/Fort Worth,https://en.wikipedia.org/wiki/File:American_Airlines_logo_2013.svg
-AS,Alaska Air,Los Angeles,SEA,Seatac,https://upload.wikimedia.org/wikipedia/commons/2/2a/Alaska_Airlines_logo.svg
-B6,Jet Blue,Long Island,MCO,Orlando,https://en.wikipedia.org/wiki/File:JetBlue_Airways_Logo.svg
-DL,Delta Air,Atlanta,ATL,Atlanta,https://en.wikipedia.org/wiki/File:Delta_logo.svg
-EV,ExpressJet,Georgia,RNO,Reno,"https://en.wikipedia.org/wiki/File:ExpressJet_Airlines,_LLC_-_Copy.png"
-F9,Frontier Airlines,Denver,DFW,Dallas/Fort Worth,https://en.wikipedia.org/wiki/File:Frontier_Airlines_logo.svg
-MQ,Envoy Air,Irving,DFW,Dallas/Fort Worth,https://en.wikipedia.org/wiki/File:Envoy_air_logo.svg
-NK,Spirit Airlines,Miramar,DFW,Dallas/Fort Worth,https://en.wikipedia.org/wiki/File:Spirit_Airlines_logo.svg 
-OO,SkyWest Airlines,St. George,IAH,Houston,https://en.wikipedia.org/wiki/File:SkyWest_Airlines_(United_States)_logo.svg
-UA,United Airlines,Chicago,IAH,Houston,https://en.wikipedia.org/wiki/File:United_Airlines_Logo.svg 
-US,US Airways,Pittsburgh,PHX,Pheonix,https://en.wikipedia.org/wiki/File:US_Airways_Logo_2011.svg
-WN,Southwest,Dallas,DAL,Dallas,https://en.wikipedia.org/wiki/File:Southwest_Airlines_logo_2014.svg
-YX,Republic Airways,Indianapolis,CLT,Charlotte,https://en.wikipedia.org/wiki/File:Republic_Airways_2019_Logo.svg
-OH,PSA Airlines,Dayton,DFW,Dallas/Fort Worth,https://en.wikipedia.org/wiki/File:PSA_Airlines_(OH)_Logo.svg 
-YV,Mesa Airlines,Pheonix,IAH,Houston,https://en.wikipedia.org/wiki/File:MesaAirlinesLogo2.jpg
+9E,Endeavor Air,Minneapolis,ATL,Atlanta,Endeavor_Air_logo.svg
+AA,American Airlines,Forth Worth,DFW,Dallas/Fort Worth,American_Airlines_logo_2013.svg
+AS,Alaska Air,Los Angeles,SEA,Seatac,Alaska_Airlines_logo.svg
+B6,Jet Blue,Long Island,MCO,Orlando,JetBlue_Airways_Logo.svg
+DL,Delta Air,Atlanta,ATL,Atlanta,Delta_logo.svg
+EV,ExpressJet,Georgia,RNO,Reno,"ExpressJet_Airlines,_LLC_-_Copy.png"
+F9,Frontier Airlines,Denver,DFW,Dallas/Fort Worth,Frontier_Airlines_logo.svg
+MQ,Envoy Air,Irving,DFW,Dallas/Fort Worth,Envoy_air_logo.svg
+NK,Spirit Airlines,Miramar,DFW,Dallas/Fort Worth,Spirit_Airlines_logo.svg
+OO,SkyWest Airlines,St. George,IAH,Houston,SkyWest_Airlines_(United_States)_logo.svg
+UA,United Airlines,Chicago,IAH,Houston,United_Airlines_Logo.svg
+US,US Airways,Pittsburgh,PHX,Pheonix,US_Airways_Logo_2011.svg
+WN,Southwest,Dallas,DAL,Dallas,Southwest_Airlines_logo_2014.svg
+YX,Republic Airways,Indianapolis,CLT,Charlotte,Republic_Airways_2019_Logo.svg
+OH,PSA Airlines,Dayton,DFW,Dallas/Fort Worth,PSA_Airlines_(OH)_Logo.svg
+YV,Mesa Airlines,Pheonix,IAH,Houston,MesaAirlinesLogo2.jpg

@@ -21,6 +21,9 @@ d3.csv("./flaskapp/data/carrier_key_table.csv").then(function(data) {
 
 // Function to show data for a given airline
 function showData(data) {
-  d3.select("#airline-logo").attr("src", data['Logo']);
+  let imagePath = './flaskapp/data/carriers/' + data['logo'];
+  console.log(imagePath); // Debug line
+  d3.select("#airline-logo").attr("src",imagePath);
   d3.select("#other-data").html(`Headquarter: ${data['Headquarter City']}<br> Nearest Hub Airport Code: ${data['Nearest Base']}<br> Hub City: ${data['Nearest Base City']}`);
 }
+

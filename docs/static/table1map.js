@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }).addTo(map);
   
     // Load the airport locations from the JSON file using D3
-    d3.json('./flaskapp/data/airports.json')
+    d3.json('./flaskapp/data/airports_key.json')
       .then(function(data) {
         // Set up a scale for color based on the airport's score
         var colorScale = d3.scaleSequential()
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
           .attr("stroke", "white")
           .attr("stroke-width", 0.5)
           .on("mouseover", function(d) {
-            // Add tooltip or other interactions as needed
             console.log("Bin count:", d.length);
           })
           .on("mouseout", function(d) {
