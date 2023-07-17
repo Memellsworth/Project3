@@ -11,7 +11,9 @@ as well as the travel path to Houston that has the least likelihood of delay.
 
 ### documentation
 
-![](https://memellsworth.github.io/Project3/journal/project-development-journal-entries.html)
+[project journal](https://memellsworth.github.io/Project3/journal/project-development-journal-entries.html)
 
+### main website
 
+[flight delay explorer](https://memellsworth.github.io/Project3/index.html)
 
