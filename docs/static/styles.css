@@ -16,6 +16,14 @@ nav {
   background-color: #fff;
 }
 
+.nav-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+}
+
+
 nav p {
   font-family: arial;
   color: #060606;
@@ -187,4 +195,10 @@ nav ul li ul li a:hover {
   object-fit: contain;
   padding: 20px;
   display: block;
+}
+
+.hexbin {
+  fill: #3D4D6E;
+  stroke: #FFFFFF;
+  stroke-width: 0.65;
 }
