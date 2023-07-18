@@ -3,71 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>Flight Delay Dashboard</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- D3 JavaScript -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="./static/logic.js"></script>
-    <script src="./static/best_ryans_logic.js"></script>
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="./static/styles.css">
-      <!-- Your JavaScript files -->
-      <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Deffered Javascripts -->
+    <script type="text/javascript" src="./static/ryan_logic.js" defer></script>
     <link rel="icon" sizes="96x96" href="./img/airport.png">
 </head>
 <body>
     <div class="header">
         <h1>Flight Delay Dashboard</h1>
         <div> <h5> Explore and compare the delay statistics for commercial airlines departing/arriving to/from IAH </h5><br>  </div> 
-         <div class="right-column"><a href="https://memellsworth.github.io/Project3/journal/project-development-journal-entries.html" class="header">project documentation</a> </div>     
+         <div class="right-column"><a href="./journal/project-development-journal-entries.html" class="header">project documentation</a> </div>     
     </div>
     
     <div class="main">
         <div class="left-column">
             <h3>  </h3>
             <!-- Add content for the left column here -->
-            <nav>
-                <p></p>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tables</a>
-                        <ul>
-                            <li><a href="#">Table 1</a></li>
-                            <li><a href="#">Table 2</a></li>
-                            <li><a href="#">Table 3</a></li>
-                        </ul>
-                    </li>
+
+
+            <div>
+                <h3>Airline Carriers</h3>
+                <div>Select from airlines servicing Houston from IAH</div>
+                <select id="airlines-dropdown"></select>
+            </div>
+            <div id="airline-data">
+                <img id="airline-logo" src="" alt="Airline logo">
+                <p id="other-data" style="padding: 20px;"></p>
+            </div>
+            
+        <div>
+            <h4 style="padding: 20px;">Airports Mapped</h4>
+            The map on the right showcases all airports serviced by IAH. Metro Areas are defined by the USDA, dataset from 2013. 
+        </div>
+
+        <div id="legend" style="background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; width: 150px;">
+            <h3>Metro Area Legend</h3>
+            <div>
+                <div style="background-color: #f00; width: 20px; height: 20px; float: left; margin-right: 5px;"></div> Metro Area
+            </div>
+            <div style="clear: both; margin-top: 10px;">
+                <div style="background-color: #0f0; width: 20px; height: 20px; float: left; margin-right: 5px;"></div> Non-Metro Area
+            </div>
+        </div>
+            
+            <div class="nav-container2">
+                <nav>
+                    <p></p>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tables</a>
+                            <ul>
+                                <li><a href="table1.html">Table 1</a></li>
+                                <li><a href="table2.html">Table 2</a></li>
+                                <li><a href="table3.html">Table 3</a></li>
+                            </ul>
+                        </li>
                     
-                </ul>
-            </nav>
+                    </ul>
+                </nav>
+            </div>
         </div>
         
         <div class="right-column">
             <div class="map-container">
-                <h3> map here </h3>
                     <div id="map"></div>
-                <!-- Add map content here -->
             </div>
         </div>
     </div>
     
     <div class="bottom-bar">
-        <h3> Charts </h3>
-        <!-- Add charts or other content for the bottom bar here -->
-        <table>
-                <tr>
-                    <td id="bar"></td>
-                    <td id="pie"></td>
-                    <td id="heatmap"></td>
-                    <td id="doublebar"></td>
-                </tr>
-        </table>
+        <h3>Charts</h3>
+        <div class="chartbox">
+            <div id="bar"></div>
+            <div id="pie"></div>
+        </div>
+        <div class="chartbox">
+            <div id="heatmap"></div>
+            <div id="doublebar"></div>
+        </div>
     </div>
+    <!-- Javascripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="text/javascript" src="./static/main_map.js" defer></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@3.0.7/dist/esri-leaflet.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./static/logic.js" defer></script>
+
 </body>
 </html>

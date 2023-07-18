@@ -50,7 +50,9 @@ def connect_to_mongodb2():
     client = MongoClient(uri)
     db = client['2022flight']
     delays_2022 = db['texasdelays']
-    return delays_2022
+    data = list(delays_2022.find())
+    processed_data = processData(data)
+    return jsonify(processed_data)
 
 @app.route('/api/document_counts', methods=['GET'])
 def get_document_counts():
