@@ -49,16 +49,16 @@ def connect_to_mongodb():
     coll_airlines = db['carrier_key_table']
     return coll_airports, coll_current, coll_airlines
 
-#@app.route('/api/fancycharts', methods=['GET'])
-#def connect_to_mongodb2():
-    #global password
-    #uri = f"mongodb+srv://analysis:{password}@delay2022r0.xduazyv.mongodb.net/?retryWrites=true&w=majority"
-    #client = MongoClient(uri)
-    #db = client['2022flight']
-    #delays_2022 = db['texasdelays']
-    #data = list(delays_2022.find())
-    #processed_data = processData(data)
-    #return jsonify(processed_data)
+@app.route('/api/fancycharts', methods=['GET'])
+def connect_to_mongodb2():
+    global password
+    uri = f"mongodb+srv://analysis:{password}@delay2022r0.xduazyv.mongodb.net/?retryWrites=true&w=majority"
+    client = MongoClient(uri)
+    db = client['2022flight']
+    delays_2022 = db['texasdelays']
+    data = list(delays_2022.find())
+    processed_data = processData(data)
+    return jsonify(processed_data)
 
 @app.route('/api/document_counts', methods=['GET'])
 def get_document_counts():
