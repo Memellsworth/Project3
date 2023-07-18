@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify,redirect, render_template, send_from_directory
+from flask import Flask, request, jsonify, redirect, render_template, send_from_directory
 import requests
 import os
 import json
@@ -23,9 +23,27 @@ password = "uUn0sOsNLAWe403r"
 def setup():
     return render_template('setup.html')
 
+
+
 @app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
+
+@app.route("/table1.html")
+def table1():
+    return render_template('table1.html')
+
+@app.route("/table2.html")
+def table2():
+    return render_template('table2.html')
+
+@app.route("/table3.html")
+def table3():
+    return render_template('table3.html')
+
+
+
+
 
 # ... additional routes ...
 
