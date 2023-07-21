@@ -11,8 +11,12 @@
             "id": "40749291c173e8cb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "cards/final presentation.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 304.5
   },
   "right": {
     "id": "477ca5b75f396ffc",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "cards/final presentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "cards/final presentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "cards/final presentation.md"
+              }
             }
           }
         ]
@@ -142,35 +150,38 @@
   },
   "active": "40749291c173e8cb",
   "lastOpenFiles": [
-    "Project Development Journal Entries.md",
     "cards/back-end notes.md",
     "cards/critical path.md",
     "cards/csvglob.md",
     "cards/data sources.md",
     "cards/data visualization.md",
-    "cards/database schema and relates.md",
     "cards/final presentation.md",
+    "cards/database schema and relates.md",
     "cards/front-end website development.md",
     "cards/milestone path.md",
     "cards/sketching out the vision.md",
-    "cards/user experience and interface.md",
     "cards/user experience_update01.md",
     "cards/user experience_update02.md",
-    "cards/vision 1-pager.md",
-    "cards/web scraping.md",
     "cards/user_experience_update03.md",
-    "else/Pasted image 20230717124501.png",
-    "else/Pasted image 20230717123850.png",
-    "else/Pasted image 20230717123718.png",
-    "else/Pasted image 20230711215919.png",
-    "else/Pasted image 20230710190421.png",
-    "else/Pasted image 20230710182136.png",
-    "else/Pasted image 20230710182127.png",
-    "else/Pasted image 20230710181647.png",
-    "else/Pasted image 20230710181420.png",
+    "cards/vision 1-pager.md",
+    "cards/user experience and interface.md",
+    "cards/web scraping.md",
+    "Project Development Journal Entries.md",
+    "presentation/Project3presentationfinal/Slide11.JPG",
+    "presentation/Project3presentationfinal/Slide10.JPG",
+    "presentation/Project3presentationfinal/Slide9.JPG",
+    "presentation/Project3presentationfinal/Slide8.JPG",
+    "presentation/Project3presentationfinal/Slide7.JPG",
+    "presentation/Project3presentationfinal/Slide6.JPG",
+    "presentation/Project3presentationfinal/Slide5.JPG",
+    "presentation/Project3presentationfinal/Slide4.JPG",
+    "presentation/Project3presentationfinal/Slide3.JPG",
+    "presentation/Project3presentationfinal/Slide2.JPG",
+    "presentation/Project3presentationfinal",
+    "presentation",
+    "New folder",
     "else/inspiration.canvas",
     "else/milestones.canvas",
-    "else/interactive scatter plot.png",
     "else/sketch.excalidraw.md",
     "cards",
     "else",
